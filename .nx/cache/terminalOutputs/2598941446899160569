@@ -1,0 +1,262 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "apps/admin-portal/src/app/routing/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/routing/index.tsx[39m:3:44
+[33m  17 |  import { RouterProvider, createBrowserRouter } from "react-router";
+  18 |  import { Suspense } from "react";
+  19 |  import { RouteErrorBoundary, Spinner } from "@ui";
+     |                                               ^
+  20 |  import { AdminTemplate, AuthTemplate } from "../layout";
+  21 |  import * as Dashboard from "@features/admin/feature-dashboard";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/auth/src/routes.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/routes.tsx[39m:2:25
+[33m  15 |    window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+  16 |  }
+  17 |  import { loadable } from "@ui";
+     |                            ^
+  18 |  const Login = loadable(_c = () => import("./pages/Login"));
+  19 |  _c2 = Login;[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/services/auth.service.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/services/auth.service.ts[39m:1:22
+[33m  1  |  import { sleep } from "@core";
+     |                         ^
+  2  |  import { ROLES } from "../config/rbac.config";
+  3  |  export function getRolesForUsername(username) {[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/store/useAuthStore.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
+[33m  1  |  import { create } from "zustand";
+  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  3  |  import { getPermissionsForRoles } from "../config/rbac.config";
+  4  |  import { getRolesForUsername } from "../services/auth.service";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/store/useAuthStore.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
+[33m  1  |  import { create } from "zustand";
+  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  3  |  import { getPermissionsForRoles } from "../config/rbac.config";
+  4  |  import { getRolesForUsername } from "../services/auth.service";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/store/useAuthStore.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
+[33m  1  |  import { create } from "zustand";
+  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  3  |  import { getPermissionsForRoles } from "../config/rbac.config";
+  4  |  import { getRolesForUsername } from "../services/auth.service";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/config/auth.config.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/config/auth.config.ts[39m:1:36
+[33m  1  |  import { AUTH_USER_CACHE_KEY } from "@core";
+     |                                       ^
+  2  |  export const LOCAL_USER_KEY = AUTH_USER_CACHE_KEY;
+  3  |  [39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/services/auth.service.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/services/auth.service.ts[39m:1:22
+[33m  1  |  import { sleep } from "@core";
+     |                         ^
+  2  |  import { ROLES } from "../config/rbac.config";
+  3  |  export function getRolesForUsername(username) {[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/guards/PublicGuard.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/guards/PublicGuard.tsx[39m:3:43
+[33m  17 |  import { Fragment } from "react";
+  18 |  import { Navigate } from "react-router";
+  19 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  20 |  export function PublicGuard({ children }) {
+  21 |    const cached = cache.getCache(AUTH_USER_CACHE_KEY)?.data;[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/auth/src/providers/LoadingProvider.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/providers/LoadingProvider.tsx[39m:3:34
+[33m  18 |  import { useState } from "react";
+  19 |  import { LoadingContext } from "../contexts/LoadingContext";
+  20 |  import { LoadingFullScreen } from "@ui";
+     |                                     ^
+  21 |  export function LoadingProvider(props) {
+  22 |    _s();[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/store/useAuthStore.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
+[33m  1  |  import { create } from "zustand";
+  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  3  |  import { getPermissionsForRoles } from "../config/rbac.config";
+  4  |  import { getRolesForUsername } from "../services/auth.service";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/guards/PrivateGuard.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/guards/PrivateGuard.tsx[39m:3:43
+[33m  18 |  import { Fragment, useLayoutEffect } from "react";
+  19 |  import { Navigate } from "react-router";
+  20 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  21 |  import useAuthStore from "../store/useAuthStore";
+  22 |  export function PrivateGuard({ children }) {[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "apps/admin-portal/src/app/layout/AppBreadcrumb.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppBreadcrumb.tsx[39m:3:34
+[33m  18 |  import clsx from "clsx";
+  19 |  import { Link, useLocation } from "react-router";
+  20 |  import { AppBreadcrumbList } from "@ui";
+     |                                     ^
+  21 |  import { getBreadcrumbItems } from "../configs/breadcrumb.config";
+  22 |  import { useThemeStore } from "@theme";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "apps/admin-portal/src/app/layout/SidebarLogo.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/SidebarLogo.tsx[39m:2:31
+[33m  17 |  var _s = $RefreshSig$();
+  18 |  import { AppstoreOutlined } from "@ant-design/icons";
+  19 |  import { GradientAvatar } from "@ui";
+     |                                  ^
+  20 |  import { useThemeStore } from "@theme";
+  21 |  import clsx from "clsx";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "apps/admin-portal/src/app/layout/AppSidebar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppSidebar.tsx[39m:3:24
+[33m  17 |  var _s = $RefreshSig$();
+  18 |  import clsx from "clsx";
+  19 |  import { AppMenu } from "@ui";
+     |                           ^
+  20 |  import SidebarLogo from "./SidebarLogo";
+  21 |  import { useLocation } from "react-router";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "apps/admin-portal/src/app/layout/AppHeader.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppHeader.tsx[39m:2:43
+[33m  17 |  var _s = $RefreshSig$();
+  18 |  import clsx from "clsx";
+  19 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  20 |  import { useAuthStore } from "@features/admin/auth";
+  21 |  import { useThemeStore } from "@theme";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "apps/admin-portal/src/app/layout/AppBreadcrumb.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppBreadcrumb.tsx[39m:3:34
+[33m  18 |  import clsx from "clsx";
+  19 |  import { Link, useLocation } from "react-router";
+  20 |  import { AppBreadcrumbList } from "@ui";
+     |                                     ^
+  21 |  import { getBreadcrumbItems } from "../configs/breadcrumb.config";
+  22 |  import { useThemeStore } from "@theme";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "apps/admin-portal/src/app/layout/SidebarLogo.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/SidebarLogo.tsx[39m:2:31
+[33m  17 |  var _s = $RefreshSig$();
+  18 |  import { AppstoreOutlined } from "@ant-design/icons";
+  19 |  import { GradientAvatar } from "@ui";
+     |                                  ^
+  20 |  import { useThemeStore } from "@theme";
+  21 |  import clsx from "clsx";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "apps/admin-portal/src/app/layout/AppSidebar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppSidebar.tsx[39m:3:24
+[33m  17 |  var _s = $RefreshSig$();
+  18 |  import clsx from "clsx";
+  19 |  import { AppMenu } from "@ui";
+     |                           ^
+  20 |  import SidebarLogo from "./SidebarLogo";
+  21 |  import { useLocation } from "react-router";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@hooks" from "apps/admin-portal/src/app/layout/AdminTemplate.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AdminTemplate.tsx[39m:6:30
+[33m  20 |  import { App, ConfigProvider, Drawer, theme } from "antd";
+  21 |  import { useThemeStore } from "@theme";
+  22 |  import { useMediaQuery } from "@hooks";
+     |                                 ^
+  23 |  import { MenuItems } from "../routing/menuItems";
+  24 |  import AppHeader from "./AppHeader";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "apps/admin-portal/src/app/layout/AppHeader.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppHeader.tsx[39m:2:43
+[33m  17 |  var _s = $RefreshSig$();
+  18 |  import clsx from "clsx";
+  19 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+     |                                              ^
+  20 |  import { useAuthStore } from "@features/admin/auth";
+  21 |  import { useThemeStore } from "@theme";[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/dashboard/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/dashboard/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { DashboardOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const Dashboard = loadable(_c = () => import("./pages/Dashboard"));[39m
+[2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/dashboard/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/dashboard/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { DashboardOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const Dashboard = loadable(_c = () => import("./pages/Dashboard"));[39m
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+[2m3:45:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/users/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/users/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { UserOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const UserList = loadable(_c = () => import("./pages/UserList"));[39m
+[2m3:45:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/orders/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/orders/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { FileTextOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const OrderList = loadable(_c = () => import("./pages/OrderList"));[39m
+[2m3:45:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/products/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/products/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { ShoppingOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const ProductList = loadable(_c = () => import("./pages/ProductList"));[39m
+[2m3:45:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/users/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/users/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { UserOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const UserList = loadable(_c = () => import("./pages/UserList"));[39m
+[2m3:45:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/orders/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/orders/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { FileTextOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const OrderList = loadable(_c = () => import("./pages/OrderList"));[39m
+[2m3:45:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/products/src/index.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/products/src/index.tsx[39m:3:25
+[33m  16 |  }
+  17 |  import { ShoppingOutlined } from "@ant-design/icons";
+  18 |  import { loadable } from "@ui";
+     |                            ^
+  19 |  import { PERMISSIONS, getItem, PermissionGuard } from "@features/admin/auth";
+  20 |  const ProductList = loadable(_c = () => import("./pages/ProductList"));[39m
+[2m3:45:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "apps/admin-portal/src/app/configs/breadcrumb.config.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/configs/breadcrumb.config.ts[39m:1:42
+[33m  1  |  import { getBreadcrumbItemsFromMap } from "@core";
+     |                                             ^
+  2  |  export const BREADCRUMB_MAP = {
+  3  |    "/": "Dashboard",[39m

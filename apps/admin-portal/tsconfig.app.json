@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": ["vite/client", "node"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "baseUrl": "../.."
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "vite.config.ts"]
+}

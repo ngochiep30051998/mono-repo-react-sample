@@ -1,0 +1,6610 @@
+{
+  "15814649691684145693apps/central-governance-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "15814649691684145693apps/central-governance-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/central-governance-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "4359300156652958534apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "2965095355320293813apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "3095509090823725874apps/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects student-portal --includeDependentProjects -- pnpm exec nx build-deps student-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "18358666837362725419apps/vite.config.mts": {
+    "targets": {
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects student-portal --includeDependentProjects -- pnpm exec nx build-deps student-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "350461507538085263apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "14341097568549102135apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "8186604076134216830apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "14815261092528055289apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "12676155938696191157apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "680817469289731150apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "11184364045469728921apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "10332714058274126813apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "15332231514631891683apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "5635893768602827970apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "6914270829263774864apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "9094073043783075118apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "4290628462186191416apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "13366922955090728267apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "3569542112181115937apps/supplier/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\supplier"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects supplier --includeDependentProjects -- pnpm exec nx build-deps supplier"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "8138868873141029916apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "8138868873141029916apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "17356092392322766539apps/supplier/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\supplier"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/supplier"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects supplier --includeDependentProjects -- pnpm exec nx build-deps supplier"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "12394990808363978546apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "12394990808363978546apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "17129717197829766099apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "17129717197829766099apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "10880554494784045091apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "10880554494784045091apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "6933986420281609755apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "6933986420281609755apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "4376425038221360477apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "4376425038221360477apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "12215886839132968902apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "12215886839132968902apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "15165001402458455460apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "15165001402458455460apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "5530841106341481814apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "5530841106341481814apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "17425628503126017685apps/admin-portal/vite.config.ts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}\\dist"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "17425628503126017685apps/admin-portal/vite.config.mts": {
+    "targets": {
+      "build": {
+        "command": "vite build",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "vite"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}\\dist\\apps\\central-governance-portal"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite build",
+          "help": {
+            "command": "pnpm exec vite build --help",
+            "example": {
+              "options": {
+                "sourcemap": true,
+                "manifest": "manifest.json"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          },
+          "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+        }
+      },
+      "dev": {
+        "continuous": true,
+        "command": "vite",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Starts Vite dev server",
+          "help": {
+            "command": "pnpm exec vite --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "continuous": true,
+        "command": "vite preview",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Locally preview Vite production build",
+          "help": {
+            "command": "pnpm exec vite preview --help",
+            "example": {
+              "options": {
+                "port": 3000
+              }
+            }
+          }
+        }
+      },
+      "serve-static": {
+        "continuous": true,
+        "executor": "@nx/web:file-server",
+        "options": {
+          "buildTarget": "build",
+          "spa": true
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --noEmit -p tsconfig.app.json",
+        "options": {
+          "cwd": "apps/admin-portal"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc -p tsconfig.app.json --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects admin-portal --includeDependentProjects -- pnpm exec nx build-deps admin-portal"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  }
+}

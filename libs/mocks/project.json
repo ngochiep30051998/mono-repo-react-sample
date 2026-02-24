@@ -1,0 +1,8 @@
+{
+  "name": "mocks",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/mocks/src",
+  "tags": ["type:util"],
+  "targets": {}
+}

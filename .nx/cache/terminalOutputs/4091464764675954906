@@ -1,0 +1,36 @@
+vite v7.3.1 building client environment for production...
+transforming...
+✓ 3906 modules transformed.
+rendering chunks...
+computing gzip size...
+../../dist/apps/admin-portal/index.html                                0.47 kB │ gzip:   0.31 kB
+../../dist/apps/admin-portal/assets/index-BYJ4ME1k.css                27.70 kB │ gzip:   4.97 kB
+../../dist/apps/admin-portal/assets/ForgotPassword-C4MP9jsK.js         0.40 kB │ gzip:   0.30 kB
+../../dist/apps/admin-portal/assets/PlusOutlined-DyCcBVeC.js           0.65 kB │ gzip:   0.45 kB
+../../dist/apps/admin-portal/assets/ArrowLeftOutlined-BPpvmmt0.js      0.73 kB │ gzip:   0.53 kB
+../../dist/apps/admin-portal/assets/UserDetail-B2AIeowP.js             1.44 kB │ gzip:   0.69 kB
+../../dist/apps/admin-portal/assets/ProductDetail-DqYroPoq.js          1.49 kB │ gzip:   0.71 kB
+../../dist/apps/admin-portal/assets/OrderDetail-C6IIXJ5v.js            1.53 kB │ gzip:   0.72 kB
+../../dist/apps/admin-portal/assets/useUserStore-DDJmpZNR.js           1.99 kB │ gzip:   0.85 kB
+../../dist/apps/admin-portal/assets/useProductStore-pqZm8kfP.js        2.13 kB │ gzip:   0.91 kB
+../../dist/apps/admin-portal/assets/index-BRG_loQc.js                  2.14 kB │ gzip:   1.22 kB
+../../dist/apps/admin-portal/assets/useOrderStore-Bkmqy6xI.js          2.27 kB │ gzip:   0.92 kB
+../../dist/apps/admin-portal/assets/row-DGxGhpw_.js                    2.57 kB │ gzip:   1.31 kB
+../../dist/apps/admin-portal/assets/Login-D25N02LT.js                  3.15 kB │ gzip:   1.31 kB
+../../dist/apps/admin-portal/assets/OrderList-DUC3egMY.js              3.20 kB │ gzip:   1.47 kB
+../../dist/apps/admin-portal/assets/UserList-BjPd7o1O.js               3.28 kB │ gzip:   1.52 kB
+../../dist/apps/admin-portal/assets/ProductList-X_dX8WSJ.js            3.65 kB │ gzip:   1.64 kB
+../../dist/apps/admin-portal/assets/Register-BweWublr.js               4.30 kB │ gzip:   1.78 kB
+../../dist/apps/admin-portal/assets/index-DlOPJcZA.js                  7.41 kB │ gzip:   3.07 kB
+../../dist/apps/admin-portal/assets/index-CEZPqW2j.js                  8.34 kB │ gzip:   3.29 kB
+../../dist/apps/admin-portal/assets/index-CL3ipVJc.js                 26.55 kB │ gzip:  10.40 kB
+../../dist/apps/admin-portal/assets/index-BbaTFRzX.js                 42.89 kB │ gzip:  13.85 kB
+../../dist/apps/admin-portal/assets/Dashboard-L-U6os7Y.js            376.77 kB │ gzip: 112.34 kB
+../../dist/apps/admin-portal/assets/index-BI2Jq7RZ.js                559.09 kB │ gzip: 184.25 kB
+../../dist/apps/admin-portal/assets/index-D2m2EFzt.js              1,049.23 kB │ gzip: 326.65 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 13.83s

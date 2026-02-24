@@ -1,0 +1,33 @@
+{
+  "name": "ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/ui/src",
+  "tags": ["type:ui"],
+  "targets": {
+    "storybook": {
+      "executor": "@storybook/react-vite:dev",
+      "options": {
+        "config": "libs/ui/.storybook/main.ts",
+        "port": 6006
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/react-vite:build",
+      "options": {
+        "config": "libs/ui/.storybook/main.ts",
+        "outputPath": "dist/storybook/ui"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

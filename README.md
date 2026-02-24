@@ -1,6 +1,46 @@
-# React Sample Project
+# Admin Portal (NX Workspace)
 
-A modern React admin dashboard built with TypeScript, Vite, and **Atomic Design** architecture.
+A modern React admin dashboard built with TypeScript, Vite, **NX** monorepo, and **Atomic Design** architecture. The main app is **Admin Portal**; shared code lives in NX libraries under the `@src` scope.
+
+## NX Workspace Structure
+
+```
+mono-repo-react-sample/
+├── apps/
+│   └── admin-portal/   # Main app — shell: routing, providers, entry
+├── libs/
+│   ├── ui/              # @ui — atoms, molecules, organisms, templates, Loadable
+│   ├── core/            # @core — http, cache, dayjs, helper, search, sleep, models
+│   ├── shared-types/    # @shared-types — types, interfaces, enums
+│   ├── hooks/           # @hooks — useKeyDown, useMediaQuery, useMounted
+│   ├── auth/            # @features/admin/auth — guards, useAuthStore, useHasPermission, RBAC, LoadingProvider
+│   ├── feature-dashboard/  # @features/admin/feature-dashboard — Router, MenuItems
+│   ├── feature-users/   # @features/admin/feature-users
+│   ├── feature-products/# @features/admin/feature-products
+│   ├── feature-orders/  # @features/admin/feature-orders
+│   ├── mocks/           # @mocks — users, products, orders mock data
+│   ├── theme/           # @theme — design tokens, tailwindExtend
+│   ├── api-client/      # @src/api-client — re-exports http from core
+│   └── test-utils/      # @src/test-utils — shared test helpers (placeholder)
+```
+
+### Scripts
+
+| Script | Description |
+|--------|-------------|
+| `pnpm dev` | Run Admin Portal (`nx serve admin-portal`) |
+| `pnpm build` | Build the app |
+| `pnpm storybook` | Run Storybook for `@ui` (port 6006) |
+| `pnpm affected:build` | Build only projects affected by changes (vs `origin/main`) |
+| `pnpm affected:test` | Test only affected projects |
+
+### Module Boundaries
+
+ESLint rule `@nx/enforce-module-boundaries` (when `@nx/eslint-plugin` is installed) enforces:
+
+- **type:app** → may depend on type:feature, type:ui, type:util
+- **type:feature** → may depend on type:ui, type:util
+- **type:ui** → may depend on type:util
 
 ## Tech Stack
 
@@ -148,8 +188,8 @@ src/
 
 ```bash
 git clone <repository-url>
-cd react-sample
-npm install
+cd mono-repo-react-sample
+pnpm install
 ```
 
 ### Environment Variables
@@ -176,10 +216,13 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Script | Description |
 |--------|-------------|
-| `npm run dev` | Start the Vite dev server |
-| `npm run build` | Type-check + production build |
-| `npm run lint` | Run ESLint |
-| `npm run preview` | Preview the production build |
+| `pnpm dev` | Start the Admin Portal dev server |
+| `pnpm build` | Type-check + production build |
+| `pnpm lint` | Run ESLint |
+| `pnpm preview` | Preview the production build |
+| `pnpm storybook` | Run Storybook for UI library |
+| `pnpm affected:build` | Build affected projects (CI) |
+| `pnpm affected:test` | Test affected projects (CI) |
 
 ## Development Guidelines
 
@@ -266,6 +309,15 @@ Use these usernames on the login page (password arbitrary) to test roles:
 - Response interceptor redirects to `/login` on `401`
 
 ## Changelog
+
+### v4.0.0 — NX Workspace Migration
+
+- **NX monorepo**: Added `nx`, `@nx/workspace`, `@nx/react`, `@nx/vite`; `nx.json`, `tsconfig.base.json`, `pnpm-workspace.yaml`.
+- **App**: New app `admin-portal` under `apps/` (routing, providers, assets, env); dev/build via `nx serve` / `nx build`.
+- **Libs**: `@ui`, `@core`, `@shared-types`, `@hooks`, `@features/admin/auth`, `@features/admin/feature-dashboard`, `@features/admin/feature-users`, `@features/admin/feature-products`, `@features/admin/feature-orders`, `@mocks`, `@theme`, `@src/api-client`, `@src/test-utils`.
+- **Auth**: Guards, useAuthStore, useHasPermission, RBAC config, LoadingProvider in `libs/features/admin/auth`; uses `AUTH_USER_CACHE_KEY` from core.
+- **Storybook**: Config moved to `libs/ui/.storybook`; one co-located story (`AppButton.stories.tsx`); existing stories still under `src/stories`.
+- **Improvements**: Affected CI scripts; theme tokens in `@theme`; api-client re-export; test-utils placeholder; module boundary rules in `.eslintrc.json`.
 
 ### v3.0.0 — Atomic Design Refactor
 

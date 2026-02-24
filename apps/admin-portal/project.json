@@ -1,0 +1,52 @@
+{
+  "name": "admin-portal",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/admin-portal/src",
+  "tags": ["type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/admin-portal"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "admin-portal:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "admin-portal:build:development"
+        },
+        "production": {
+          "buildTarget": "admin-portal:build:production"
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "admin-portal:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "admin-portal:build:production"
+        }
+      }
+    }
+  }
+}

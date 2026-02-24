@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "ignorePatterns": ["node_modules", "dist", "**/dist", "*.config.js", "*.config.ts"],
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:feature", "type:ui", "type:util"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:util"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

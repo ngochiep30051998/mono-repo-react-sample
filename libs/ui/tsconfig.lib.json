@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@atoms/*": ["src/*"],
+      "@molecules/*": ["src/molecules/*"],
+      "@organisms/*": ["src/organisms/*"],
+      "@templates/*": ["src/templates/*"],
+      "@utils/*": ["src/utils/*"],
+      "@core": ["../core/src/index.ts"],
+      "@core/*": ["../core/src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.stories.tsx"]
+}
