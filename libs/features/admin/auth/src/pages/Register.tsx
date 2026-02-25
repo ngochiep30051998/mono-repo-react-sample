@@ -2,7 +2,7 @@ import { MailOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Typography } from 'antd';
 import { GoogleIcon, FacebookIcon } from '@ui';
 import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
-import useAuthStore from '../../../../../stores/src/lib/useAuthStore';
+import { useAuthStore } from '@stores';
 import { getPermissionsForRoles, ROLES } from '@core';
 import { Link, useNavigate } from 'react-router';
 
