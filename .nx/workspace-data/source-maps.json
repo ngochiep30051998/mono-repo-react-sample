@@ -603,6 +603,172 @@
       "nx/core/project-json"
     ]
   },
+  "apps/vendors": {
+    "root": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:app": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.mode": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.mode": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.executor": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.defaultConfiguration": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations.production": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations.production.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
   "libs/contexts": {
     "root": [
       "libs/contexts/project.json",

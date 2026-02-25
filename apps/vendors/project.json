@@ -1,0 +1,52 @@
+{
+  "name": "vendors",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/vendors/src",
+  "projectType": "application",
+  "tags": ["type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/vendors"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "vendors:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "vendors:build:development"
+        },
+        "production": {
+          "buildTarget": "vendors:build:production"
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "vendors:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "vendors:build:production"
+        }
+      }
+    }
+  }
+}

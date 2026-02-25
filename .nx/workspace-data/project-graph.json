@@ -483,6 +483,81 @@
         "implicitDependencies": []
       }
     },
+    "vendors": {
+      "name": "vendors",
+      "type": "app",
+      "data": {
+        "root": "apps/vendors",
+        "name": "vendors",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/vendors/src",
+        "projectType": "application",
+        "tags": [
+          "type:app"
+        ],
+        "targets": {
+          "build": {
+            "executor": "@nx/vite:build",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "defaultConfiguration": "production",
+            "options": {
+              "outputPath": "dist/apps/vendors"
+            },
+            "configurations": {
+              "development": {
+                "mode": "development"
+              },
+              "production": {
+                "mode": "production"
+              }
+            },
+            "parallelism": true,
+            "cache": true,
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "serve": {
+            "executor": "@nx/vite:dev-server",
+            "defaultConfiguration": "development",
+            "options": {
+              "buildTarget": "vendors:build"
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "vendors:build:development"
+              },
+              "production": {
+                "buildTarget": "vendors:build:production"
+              }
+            },
+            "parallelism": true,
+            "continuous": true
+          },
+          "preview": {
+            "executor": "@nx/vite:preview-server",
+            "defaultConfiguration": "production",
+            "options": {
+              "buildTarget": "vendors:build"
+            },
+            "configurations": {
+              "production": {
+                "buildTarget": "vendors:build:production"
+              }
+            },
+            "parallelism": true,
+            "continuous": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
     "hooks": {
       "name": "hooks",
       "type": "lib",
@@ -11385,11 +11460,6 @@
         "source": "feature-products",
         "target": "shared-types",
         "type": "static"
-      },
-      {
-        "source": "feature-products",
-        "target": "auth",
-        "type": "static"
       }
     ],
     "feature-orders": [
@@ -11672,6 +11742,7 @@
         "type": "static"
       }
     ],
+    "vendors": [],
     "hooks": [
       {
         "source": "hooks",
@@ -25523,5 +25594,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1772011586573
+  "computedAt": 1772013188388
 }

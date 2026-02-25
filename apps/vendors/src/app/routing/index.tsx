@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router';
 import { Suspense } from 'react';
 import { RouteErrorBoundary, Spinner } from '@ui';
-import { AdminTemplate, AuthTemplate } from '../layout';
+import { VendorTemplate, AuthTemplate } from '../layout';
 import * as Dashboard from '@features/admin/feature-dashboard';
 import * as Users from '@features/admin/feature-users';
 import * as Products from '@features/admin/feature-products';
@@ -20,7 +20,7 @@ const router = createBrowserRouter(
       children: [
         {
           path: '/',
-          element: <PrivateGuard children={<AdminTemplate />} />,
+          element: <PrivateGuard children={<VendorTemplate />} />,
           children: [],
         },
         {
@@ -28,7 +28,7 @@ const router = createBrowserRouter(
           children: [AuthRouter],
         },
         {
-          element: <PrivateGuard children={<AdminTemplate />} />,
+          element: <PrivateGuard children={<VendorTemplate />} />,
           children: [...modules.map((x) => x.Router)],
         },
       ],
@@ -47,3 +47,4 @@ const Router = () => (
 
 export { MenuItems } from './menuItems';
 export default Router;
+

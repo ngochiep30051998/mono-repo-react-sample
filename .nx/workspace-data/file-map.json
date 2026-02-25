@@ -127,615 +127,1082 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".gitignore",
-        "hash": "17765844421591992080"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-cache-storage.md",
-        "hash": "4473975102281542090"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
-        "hash": "7261392845272762360"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-cache-storage.md",
-        "hash": "4473975102281542090"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/async-defer-await.md",
-        "hash": "3159224932091404993"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
-        "hash": "5148988412928640179"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
-        "hash": "5599946254049628539"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
-        "hash": "9407357547299306602"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "16891769330806462070"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/server-dedup-props.md",
-        "hash": "89932775870927844"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/client-event-listeners.md",
-        "hash": "2290999800119201500"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/server-dedup-props.md",
-        "hash": "89932775870927844"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
-        "hash": "17938382406664992881"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/server-auth-actions.md",
-        "hash": "3837387182798582799"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
-        "hash": "18007172104013950582"
-      },
-      {
-        "file": "public/vite.svg",
-        "hash": "16046085400642193116"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
-        "hash": "16443122289020849253"
-      },
-      {
-        "file": "CHANGELOG.md",
-        "hash": "17307461989437182189"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
-        "hash": "4396527649277943118"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/AGENTS.md",
-        "hash": "8751713287793201618"
-      },
-      {
-        "file": "README.md",
-        "hash": "16465739073950696275"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
-        "hash": "7099255862863622168"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/async-dependencies.md",
-        "hash": "362053629801098941"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
-        "hash": "1609424540171525514"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
-        "hash": "5782915936756431502"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "14688272390704683536"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/AGENTS.md",
-        "hash": "8751713287793201618"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/SKILL.md",
-        "hash": "16776280587389704113"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
-        "hash": "11639728421160587405"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/async-api-routes.md",
-        "hash": "16544867177665449626"
-      },
-      {
-        "file": "libs/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
-        "hash": "9407357547299306602"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
-        "hash": "3509383411122757610"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
-        "hash": "17938382406664992881"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
-        "hash": "12826826783010347341"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
-        "hash": "8390866120172684676"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
-        "hash": "724482472561893535"
-      },
-      {
-        "file": "nx.json",
-        "hash": "2917072227392608632"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-preload.md",
-        "hash": "4126844704044281043"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/SKILL.md",
-        "hash": "16776280587389704113"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
-        "hash": "16940781284974441162"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
-        "hash": "9347769373705749534"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
-        "hash": "5881203462050232808"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/async-dependencies.md",
-        "hash": "362053629801098941"
-      },
-      {
         "file": "vitest.shims.d.ts",
         "hash": "2867515085840056411"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
-        "hash": "944525327759565176"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
-        "hash": "4809100720123805024"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-activity.md",
-        "hash": "6975949483269836975"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/server-cache-lru.md",
-        "hash": "17721412115180282546"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/server-serialization.md",
-        "hash": "18166919127829247542"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/advanced-init-once.md",
-        "hash": "16310442114473037249"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
-        "hash": "11200604071438056777"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-index-maps.md",
-        "hash": "13968055374656859643"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
-        "hash": "15512552288961428330"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/server-cache-react.md",
-        "hash": "2795197169987304727"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
-        "hash": "724482472561893535"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
-        "hash": "16443122289020849253"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
-        "hash": "15512552288961428330"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-conditional.md",
-        "hash": "11058193522645705725"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
-        "hash": "7774542710975757962"
       },
       {
         "file": ".agents/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
         "hash": "11078240040604349792"
       },
       {
-        "file": "libs/features/supplier/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
-        "hash": "7261392845272762360"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
-        "hash": "15283390530862372101"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-length-check-first.md",
-        "hash": "8703851558199634360"
-      },
-      {
-        "file": "package.json",
-        "hash": "1868164230186792685"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-early-exit.md",
-        "hash": "10768291492958447692"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
-        "hash": "11639728421160587405"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
-        "hash": "12826826783010347341"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-transitions.md",
-        "hash": "7266431553275870502"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
-        "hash": "7413685233983550101"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/server-cache-lru.md",
-        "hash": "17721412115180282546"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-early-exit.md",
-        "hash": "10768291492958447692"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
-        "hash": "1609424540171525514"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/async-parallel.md",
-        "hash": "5854933617326976288"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/client-event-listeners.md",
-        "hash": "2290999800119201500"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "324862774530036549"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
-        "hash": "944525327759565176"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
-        "hash": "11078240040604349792"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/async-api-routes.md",
-        "hash": "16544867177665449626"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/advanced-init-once.md",
-        "hash": "16310442114473037249"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
-        "hash": "11126537502024084074"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
-        "hash": "5599946254049628539"
-      },
-      {
-        "file": "tailwind.config.js",
-        "hash": "7959997166129442521"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "6380552377788308368"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
-        "hash": "18007172104013950582"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
-        "hash": "8390866120172684676"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
-        "hash": "7413685233983550101"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
-        "hash": "11200604071438056777"
-      },
-      {
-        "file": "eslint.config.js",
-        "hash": "2392669060357061581"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "4982073760116865719"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/server-auth-actions.md",
-        "hash": "3837387182798582799"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
-        "hash": "5148988412928640179"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
-        "hash": "4062147810802439341"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "6745251221502369911"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-preload.md",
-        "hash": "4126844704044281043"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
-        "hash": "16009994568278148006"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
-        "hash": "7774542710975757962"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
-        "hash": "13891482541964622585"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
-        "hash": "18114716579949616312"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-index-maps.md",
-        "hash": "13968055374656859643"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-length-check-first.md",
-        "hash": "8703851558199634360"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
-        "hash": "5782915936756431502"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-transitions.md",
-        "hash": "7266431553275870502"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
-        "hash": "14239023547591978674"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
-        "hash": "10262031674717645042"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
-        "hash": "3281152277198724010"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/async-parallel.md",
-        "hash": "5854933617326976288"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-conditional.md",
-        "hash": "11058193522645705725"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "13377419431693519786"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
-        "hash": "5881203462050232808"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
-        "hash": "11126537502024084074"
-      },
-      {
         "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
         "hash": "16009994568278148006"
       },
       {
-        "file": ".agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
-        "hash": "10262031674717645042"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-memo.md",
-        "hash": "12039101955148972973"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
-        "hash": "9347769373705749534"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
-        "hash": "10422107643919719717"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
-        "hash": "3509383411122757610"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
-        "hash": "15283390530862372101"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
-        "hash": "3281152277198724010"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
-        "hash": "14239023547591978674"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
-        "hash": "16940781284974441162"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
-        "hash": "18114716579949616312"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-activity.md",
-        "hash": "6975949483269836975"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
-        "hash": "4244437055202273181"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
-        "hash": "10422107643919719717"
-      },
-      {
-        "file": ".cursor/worktrees.json",
-        "hash": "15807341515258800370"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-memo.md",
-        "hash": "12039101955148972973"
-      },
-      {
-        "file": ".agents/skills/vercel-react-best-practices/rules/server-cache-react.md",
-        "hash": "2795197169987304727"
+        "file": ".cursor/skills/vercel-react-best-practices/rules/server-cache-lru.md",
+        "hash": "17721412115180282546"
       },
       {
         "file": "postcss.config.js",
         "hash": "1186740398966223072"
       },
       {
-        "file": ".agents/skills/vercel-react-best-practices/rules/async-defer-await.md",
-        "hash": "3159224932091404993"
+        "file": ".agents/skills/vercel-react-best-practices/AGENTS.md",
+        "hash": "8751713287793201618"
       },
       {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
-        "hash": "4809100720123805024"
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+        "hash": "1609424540171525514"
       },
       {
-        "file": ".agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
-        "hash": "7099255862863622168"
+        "file": ".agents/skills/vercel-react-best-practices/rules/client-event-listeners.md",
+        "hash": "2290999800119201500"
       },
       {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
-        "hash": "4062147810802439341"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/server-serialization.md",
-        "hash": "18166919127829247542"
-      },
-      {
-        "file": ".cursor/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
-        "hash": "13891482541964622585"
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
+        "hash": "5599946254049628539"
       },
       {
         "file": ".agents/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
         "hash": "4396527649277943118"
       },
       {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
+        "hash": "13891482541964622585"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/server-auth-actions.md",
+        "hash": "3837387182798582799"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-preload.md",
+        "hash": "4126844704044281043"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
+        "hash": "4062147810802439341"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-preload.md",
+        "hash": "4126844704044281043"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "6380552377788308368"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/server-dedup-props.md",
+        "hash": "89932775870927844"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "324862774530036549"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
+        "hash": "18007172104013950582"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
+        "hash": "10422107643919719717"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+        "hash": "1609424540171525514"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
+        "hash": "9407357547299306602"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
+        "hash": "15512552288961428330"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
+        "hash": "3281152277198724010"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-transitions.md",
+        "hash": "7266431553275870502"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
+        "hash": "18007172104013950582"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
+        "hash": "15512552288961428330"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+        "hash": "9347769373705749534"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
+        "hash": "11639728421160587405"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-length-check-first.md",
+        "hash": "8703851558199634360"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
+        "hash": "8390866120172684676"
+      },
+      {
+        "file": "package.json",
+        "hash": "1868164230186792685"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
+        "hash": "4062147810802439341"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
+        "hash": "3509383411122757610"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-cache-storage.md",
+        "hash": "4473975102281542090"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
+        "hash": "16009994568278148006"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
+        "hash": "5599946254049628539"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
+        "hash": "18114716579949616312"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
+        "hash": "17938382406664992881"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
+        "hash": "18114716579949616312"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
+        "hash": "3281152277198724010"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
+        "hash": "7413685233983550101"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/server-dedup-props.md",
+        "hash": "89932775870927844"
+      },
+      {
+        "file": "nx.json",
+        "hash": "2917072227392608632"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
+        "hash": "17938382406664992881"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+        "hash": "7774542710975757962"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
+        "hash": "11200604071438056777"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/async-api-routes.md",
+        "hash": "16544867177665449626"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/server-cache-react.md",
+        "hash": "2795197169987304727"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
+        "hash": "7413685233983550101"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/server-auth-actions.md",
+        "hash": "3837387182798582799"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/SKILL.md",
+        "hash": "16776280587389704113"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/server-serialization.md",
+        "hash": "18166919127829247542"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/server-cache-react.md",
+        "hash": "2795197169987304727"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
+        "hash": "16443122289020849253"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-index-maps.md",
+        "hash": "13968055374656859643"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
+        "hash": "11639728421160587405"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
+        "hash": "7099255862863622168"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
+        "hash": "5148988412928640179"
+      },
+      {
+        "file": ".cursor/worktrees.json",
+        "hash": "15807341515258800370"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+        "hash": "9347769373705749534"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
+        "hash": "7261392845272762360"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
+        "hash": "13891482541964622585"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
+        "hash": "944525327759565176"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
+        "hash": "11200604071438056777"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/async-api-routes.md",
+        "hash": "16544867177665449626"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/async-defer-await.md",
+        "hash": "3159224932091404993"
+      },
+      {
+        "file": "public/vite.svg",
+        "hash": "16046085400642193116"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/server-serialization.md",
+        "hash": "18166919127829247542"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-memo.md",
+        "hash": "12039101955148972973"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/AGENTS.md",
+        "hash": "8751713287793201618"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/advanced-init-once.md",
+        "hash": "16310442114473037249"
+      },
+      {
+        "file": "tailwind.config.js",
+        "hash": "7959997166129442521"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
+        "hash": "5782915936756431502"
+      },
+      {
         "file": ".cursor/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
         "hash": "4244437055202273181"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-length-check-first.md",
+        "hash": "8703851558199634360"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-transitions.md",
+        "hash": "7266431553275870502"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
+        "hash": "16940781284974441162"
+      },
+      {
+        "file": "libs/features/supplier/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+        "hash": "5881203462050232808"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
+        "hash": "14239023547591978674"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
+        "hash": "5148988412928640179"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
+        "hash": "16940781284974441162"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+        "hash": "5881203462050232808"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "16891769330806462070"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
+        "hash": "10262031674717645042"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
+        "hash": "9407357547299306602"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-conditional.md",
+        "hash": "11058193522645705725"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/advanced-init-once.md",
+        "hash": "16310442114473037249"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
+        "hash": "16443122289020849253"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/SKILL.md",
+        "hash": "16776280587389704113"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
+        "hash": "11078240040604349792"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/async-dependencies.md",
+        "hash": "362053629801098941"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
+        "hash": "10262031674717645042"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
+        "hash": "11126537502024084074"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-activity.md",
+        "hash": "6975949483269836975"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
+        "hash": "4396527649277943118"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
+        "hash": "3509383411122757610"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "6745251221502369911"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/async-defer-await.md",
+        "hash": "3159224932091404993"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/async-dependencies.md",
+        "hash": "362053629801098941"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
+        "hash": "7099255862863622168"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-cache-storage.md",
+        "hash": "4473975102281542090"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
+        "hash": "944525327759565176"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-index-maps.md",
+        "hash": "13968055374656859643"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
+        "hash": "12826826783010347341"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
+        "hash": "15283390530862372101"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/bundle-conditional.md",
+        "hash": "11058193522645705725"
+      },
+      {
+        "file": "README.md",
+        "hash": "16465739073950696275"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
+        "hash": "7261392845272762360"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/server-cache-lru.md",
+        "hash": "17721412115180282546"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "14688272390704683536"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/async-parallel.md",
+        "hash": "5854933617326976288"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "17765844421591992080"
+      },
+      {
+        "file": "eslint.config.js",
+        "hash": "2392669060357061581"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
+        "hash": "11126537502024084074"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
+        "hash": "12826826783010347341"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
+        "hash": "8390866120172684676"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "17307461989437182189"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
+        "hash": "10422107643919719717"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
+        "hash": "4244437055202273181"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-activity.md",
+        "hash": "6975949483269836975"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+        "hash": "4809100720123805024"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "4982073760116865719"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/js-early-exit.md",
+        "hash": "10768291492958447692"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/async-parallel.md",
+        "hash": "5854933617326976288"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "13377419431693519786"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+        "hash": "4809100720123805024"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
+        "hash": "15283390530862372101"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
+        "hash": "724482472561893535"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/js-early-exit.md",
+        "hash": "10768291492958447692"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-memo.md",
+        "hash": "12039101955148972973"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+        "hash": "7774542710975757962"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
+        "hash": "14239023547591978674"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/client-event-listeners.md",
+        "hash": "2290999800119201500"
+      },
+      {
+        "file": ".agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
+        "hash": "724482472561893535"
+      },
+      {
+        "file": ".cursor/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
+        "hash": "5782915936756431502"
       }
     ],
     "projectFileMap": {
-      "auth": [
+      "admin-portal": [
         {
-          "file": "libs/features/admin/auth/project.json",
-          "hash": "15064996177684320303"
+          "file": "apps/admin-portal/.env.development",
+          "hash": "7149661830759011990"
         },
         {
-          "file": "libs/features/admin/auth/src/index.ts",
-          "hash": "3149793148174901936",
+          "file": "apps/admin-portal/.env.prod",
+          "hash": "8296036928798054479"
+        },
+        {
+          "file": "apps/admin-portal/.env.staging",
+          "hash": "8766948274673310372"
+        },
+        {
+          "file": "apps/admin-portal/REFACTOR-LIBS.md",
+          "hash": "13846467987083511395"
+        },
+        {
+          "file": "apps/admin-portal/index.html",
+          "hash": "14508147696414745812"
+        },
+        {
+          "file": "apps/admin-portal/project.json",
+          "hash": "1084841579398078733"
+        },
+        {
+          "file": "apps/admin-portal/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/admin-portal/src/app/Root.tsx",
+          "hash": "366678919243887084",
+          "deps": [
+            "contexts"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/admin-portal/src/app/configs/breadcrumb.config.ts",
+          "hash": "10189941640217451180",
           "deps": [
             "core"
           ]
         },
         {
-          "file": "libs/features/admin/auth/src/pages/ForgotPassword.tsx",
-          "hash": "11741433220242902162"
+          "file": "apps/admin-portal/src/app/index.ts",
+          "hash": "6514110571342584903"
         },
         {
-          "file": "libs/features/admin/auth/src/pages/Login.tsx",
-          "hash": "15003271401743933257",
+          "file": "apps/admin-portal/src/app/layout/AdminTemplate.tsx",
+          "hash": "1739501077646683178",
           "deps": [
-            "core",
+            "npm:clsx",
+            "npm:react",
             "npm:react-router",
-            "contexts",
-            "ui"
+            "npm:antd",
+            "theme",
+            "hooks",
+            "core"
           ]
         },
         {
-          "file": "libs/features/admin/auth/src/pages/Register.tsx",
-          "hash": "15874389300600219656",
+          "file": "apps/admin-portal/src/app/layout/AppBreadcrumb.tsx",
+          "hash": "12774642426248134842",
           "deps": [
+            "npm:clsx",
+            "npm:react-router",
+            "ui",
+            "theme"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/app/layout/AppHeader.tsx",
+          "hash": "679968508277559427",
+          "deps": [
+            "npm:clsx",
+            "core",
+            "theme",
+            "hooks",
             "npm:@ant-design/icons",
             "npm:antd",
             "ui",
-            "core",
             "npm:react-router"
           ]
         },
         {
-          "file": "libs/features/admin/auth/src/routes.tsx",
-          "hash": "12069815224985702444",
+          "file": "apps/admin-portal/src/app/layout/AppSidebar.tsx",
+          "hash": "4602889287636878800",
+          "deps": [
+            "npm:clsx",
+            "npm:antd",
+            "ui",
+            "npm:react-router",
+            "shared-types",
+            "theme"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/app/layout/AuthTemplate.tsx",
+          "hash": "13989268237675472778",
+          "deps": [
+            "npm:react-router"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/app/layout/SidebarLogo.tsx",
+          "hash": "2602907640198410626",
+          "deps": [
+            "npm:@ant-design/icons",
+            "ui",
+            "theme",
+            "npm:clsx"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/app/layout/index.ts",
+          "hash": "10548382070044743516"
+        },
+        {
+          "file": "apps/admin-portal/src/app/routing/index.tsx",
+          "hash": "8077328934168288459",
           "deps": [
             "npm:react-router",
+            "npm:react",
+            "ui",
+            "feature-dashboard",
+            "feature-users",
+            "feature-products",
+            "feature-orders",
+            "core",
+            "auth"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/app/routing/menu.tsx",
+          "hash": "11132206819625291741",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "shared-types"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/app/routing/menuItems.ts",
+          "hash": "9991797586156236862",
+          "deps": [
+            "shared-types",
+            "feature-dashboard",
+            "feature-users",
+            "feature-products",
+            "feature-orders"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin-portal/src/main.tsx",
+          "hash": "11452609913503858277",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/src/styles.css",
+          "hash": "3080282421501116443"
+        },
+        {
+          "file": "apps/admin-portal/tsconfig.app.json",
+          "hash": "7239237436127128979"
+        },
+        {
+          "file": "apps/admin-portal/tsconfig.json",
+          "hash": "10766838007533249304"
+        },
+        {
+          "file": "apps/admin-portal/vite.config.mts",
+          "hash": "16843585825101184914",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        },
+        {
+          "file": "apps/admin-portal/vite.config.ts",
+          "hash": "11901489224078721383",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
+      "feature-users": [
+        {
+          "file": "libs/features/admin/users/project.json",
+          "hash": "13390306173114935343"
+        },
+        {
+          "file": "libs/features/admin/users/src/components/UserFormModal.tsx",
+          "hash": "12832886808695105998",
+          "deps": [
+            "npm:react",
+            "npm:antd",
+            "ui",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/users/src/hooks/useUserStore.ts",
+          "hash": "17165630780796426872",
+          "deps": [
+            "npm:zustand",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/users/src/index.tsx",
+          "hash": "510789034455872271",
+          "deps": [
+            "npm:@ant-design/icons",
+            "npm:react-router",
+            "ui",
+            "core",
+            "shared-types"
+          ]
+        },
+        {
+          "file": "libs/features/admin/users/src/pages/UserDetail.tsx",
+          "hash": "4406991031890125160",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "npm:@ant-design/icons",
             "ui"
           ]
         },
         {
-          "file": "libs/features/admin/auth/tsconfig.json",
+          "file": "libs/features/admin/users/src/pages/UserList.tsx",
+          "hash": "4838218975401132759",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "npm:antd",
+            "npm:@ant-design/icons",
+            "auth",
+            "ui",
+            "core",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/users/src/services/user.service.ts",
+          "hash": "11307565515883545382",
+          "deps": [
+            "core",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/users/tsconfig.json",
           "hash": "4064879888624327698"
         },
         {
-          "file": "libs/features/admin/auth/tsconfig.lib.json",
-          "hash": "13686592157879193170"
+          "file": "libs/features/admin/users/tsconfig.lib.json",
+          "hash": "15470384488222617150"
+        }
+      ],
+      "hooks": [
+        {
+          "file": "libs/hooks/project.json",
+          "hash": "5869194428016001663"
+        },
+        {
+          "file": "libs/hooks/src/index.ts",
+          "hash": "7846011639040890338"
+        },
+        {
+          "file": "libs/hooks/src/useHasPermission.ts",
+          "hash": "17107226717338401054",
+          "deps": [
+            "core"
+          ]
+        },
+        {
+          "file": "libs/hooks/src/useKeyDown.ts",
+          "hash": "4000140202527091087",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/hooks/src/useMediaQuery.ts",
+          "hash": "4558990085386101140",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/hooks/src/useMounted.ts",
+          "hash": "15757182969162767693",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/hooks/tsconfig.json",
+          "hash": "13571554262532977425"
+        },
+        {
+          "file": "libs/hooks/tsconfig.lib.json",
+          "hash": "847953140782770199"
+        }
+      ],
+      "feature-orders": [
+        {
+          "file": "libs/features/admin/orders/project.json",
+          "hash": "11382757134458961669"
+        },
+        {
+          "file": "libs/features/admin/orders/src/components/OrderStatusModal.tsx",
+          "hash": "13069382950238429663",
+          "deps": [
+            "npm:react",
+            "npm:antd",
+            "ui",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/orders/src/hooks/useOrderStore.ts",
+          "hash": "16881377463632418883",
+          "deps": [
+            "npm:zustand",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/orders/src/index.tsx",
+          "hash": "1663492819389399329",
+          "deps": [
+            "npm:@ant-design/icons",
+            "npm:react-router",
+            "ui",
+            "core",
+            "shared-types"
+          ]
+        },
+        {
+          "file": "libs/features/admin/orders/src/pages/OrderDetail.tsx",
+          "hash": "498345958461992383",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "npm:@ant-design/icons",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/features/admin/orders/src/pages/OrderList.tsx",
+          "hash": "16191022303021018321",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "npm:antd",
+            "npm:@ant-design/icons",
+            "auth",
+            "ui",
+            "core",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/orders/src/services/order.service.ts",
+          "hash": "16502427324148184820",
+          "deps": [
+            "core",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/orders/tsconfig.json",
+          "hash": "4064879888624327698"
+        },
+        {
+          "file": "libs/features/admin/orders/tsconfig.lib.json",
+          "hash": "15470384488222617150"
+        }
+      ],
+      "theme": [
+        {
+          "file": "libs/theme/project.json",
+          "hash": "2165377005620785378"
+        },
+        {
+          "file": "libs/theme/src/index.ts",
+          "hash": "5991621292253952242"
+        },
+        {
+          "file": "libs/theme/src/tokens.ts",
+          "hash": "10128084478827978262"
+        },
+        {
+          "file": "libs/theme/src/useThemeStore.tsx",
+          "hash": "6154209629370052930",
+          "deps": [
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "libs/theme/tsconfig.json",
+          "hash": "16953580243959849969"
+        },
+        {
+          "file": "libs/theme/tsconfig.lib.json",
+          "hash": "9831918030334557721"
+        }
+      ],
+      "vendors": [
+        {
+          "file": "apps/vendors/project.json",
+          "hash": "12771958642209802931"
+        }
+      ],
+      "test-utils": [
+        {
+          "file": "libs/test-utils/project.json",
+          "hash": "4562913045929760038"
+        },
+        {
+          "file": "libs/test-utils/src/index.ts",
+          "hash": "6148512753029795227"
+        },
+        {
+          "file": "libs/test-utils/tsconfig.json",
+          "hash": "5103085181547957549"
+        },
+        {
+          "file": "libs/test-utils/tsconfig.lib.json",
+          "hash": "13722228731920081307"
+        }
+      ],
+      "feature-products": [
+        {
+          "file": "libs/features/admin/products/project.json",
+          "hash": "6607725288800239342"
+        },
+        {
+          "file": "libs/features/admin/products/src/components/ProductFormModal.tsx",
+          "hash": "13072410523367537736",
+          "deps": [
+            "npm:react",
+            "npm:antd",
+            "ui",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/products/src/hooks/useProductStore.ts",
+          "hash": "398819177970044363",
+          "deps": [
+            "npm:zustand",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/products/src/index.tsx",
+          "hash": "84315808136960299",
+          "deps": [
+            "npm:@ant-design/icons",
+            "npm:react-router",
+            "ui",
+            "core",
+            "shared-types"
+          ]
+        },
+        {
+          "file": "libs/features/admin/products/src/pages/ProductDetail.tsx",
+          "hash": "14387724255170579576",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "npm:@ant-design/icons",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/features/admin/products/src/pages/ProductList.tsx",
+          "hash": "4869152262795320452",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "npm:antd",
+            "npm:@ant-design/icons",
+            "core",
+            "ui",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/products/src/services/product.service.ts",
+          "hash": "3310057705640034200",
+          "deps": [
+            "core",
+            "mocks"
+          ]
+        },
+        {
+          "file": "libs/features/admin/products/tsconfig.json",
+          "hash": "4064879888624327698"
+        },
+        {
+          "file": "libs/features/admin/products/tsconfig.lib.json",
+          "hash": "15470384488222617150"
         }
       ],
       "shared-types": [
@@ -815,81 +1282,6 @@
           "hash": "16555714294008316221"
         }
       ],
-      "feature-orders": [
-        {
-          "file": "libs/features/admin/orders/project.json",
-          "hash": "11382757134458961669"
-        },
-        {
-          "file": "libs/features/admin/orders/src/components/OrderStatusModal.tsx",
-          "hash": "13069382950238429663",
-          "deps": [
-            "npm:react",
-            "npm:antd",
-            "ui",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/orders/src/hooks/useOrderStore.ts",
-          "hash": "16881377463632418883",
-          "deps": [
-            "npm:zustand",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/orders/src/index.tsx",
-          "hash": "1663492819389399329",
-          "deps": [
-            "npm:@ant-design/icons",
-            "npm:react-router",
-            "ui",
-            "core",
-            "shared-types"
-          ]
-        },
-        {
-          "file": "libs/features/admin/orders/src/pages/OrderDetail.tsx",
-          "hash": "498345958461992383",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "npm:@ant-design/icons",
-            "ui"
-          ]
-        },
-        {
-          "file": "libs/features/admin/orders/src/pages/OrderList.tsx",
-          "hash": "16191022303021018321",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "npm:antd",
-            "npm:@ant-design/icons",
-            "auth",
-            "ui",
-            "core",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/orders/src/services/order.service.ts",
-          "hash": "16502427324148184820",
-          "deps": [
-            "core",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/orders/tsconfig.json",
-          "hash": "4064879888624327698"
-        },
-        {
-          "file": "libs/features/admin/orders/tsconfig.lib.json",
-          "hash": "15470384488222617150"
-        }
-      ],
       "admin-portal-e2e": [
         {
           "file": "apps/admin-portal-e2e/playwright.config.ts",
@@ -916,51 +1308,128 @@
           "hash": "18107275616570252607"
         }
       ],
-      "test-utils": [
+      "core": [
         {
-          "file": "libs/test-utils/project.json",
-          "hash": "4562913045929760038"
+          "file": "libs/core/project.json",
+          "hash": "4077257792841683183"
         },
         {
-          "file": "libs/test-utils/src/index.ts",
-          "hash": "6148512753029795227"
+          "file": "libs/core/src/breadcrumb.utils.ts",
+          "hash": "3875518321968838391"
         },
         {
-          "file": "libs/test-utils/tsconfig.json",
-          "hash": "5103085181547957549"
+          "file": "libs/core/src/cache.ts",
+          "hash": "8740351036945547934"
         },
         {
-          "file": "libs/test-utils/tsconfig.lib.json",
-          "hash": "13722228731920081307"
-        }
-      ],
-      "theme": [
-        {
-          "file": "libs/theme/project.json",
-          "hash": "2165377005620785378"
+          "file": "libs/core/src/configs/auth.config.ts",
+          "hash": "16979071156249353628"
         },
         {
-          "file": "libs/theme/src/index.ts",
-          "hash": "5991621292253952242"
+          "file": "libs/core/src/configs/rbac.config.ts",
+          "hash": "6295026239787588160"
         },
         {
-          "file": "libs/theme/src/tokens.ts",
-          "hash": "10128084478827978262"
+          "file": "libs/core/src/constants.ts",
+          "hash": "8829639718961336202"
         },
         {
-          "file": "libs/theme/src/useThemeStore.tsx",
-          "hash": "6154209629370052930",
+          "file": "libs/core/src/dayjs.ts",
+          "hash": "13539723947868513202",
           "deps": [
-            "npm:zustand"
+            "npm:dayjs"
           ]
         },
         {
-          "file": "libs/theme/tsconfig.json",
-          "hash": "16953580243959849969"
+          "file": "libs/core/src/export.utils.ts",
+          "hash": "10212958668632017522",
+          "deps": [
+            "npm:xlsx"
+          ]
         },
         {
-          "file": "libs/theme/tsconfig.lib.json",
-          "hash": "9831918030334557721"
+          "file": "libs/core/src/guards/PermissionGuard.tsx",
+          "hash": "8352975521805815470",
+          "deps": [
+            "npm:react",
+            "npm:react-router",
+            "hooks"
+          ]
+        },
+        {
+          "file": "libs/core/src/guards/PrivateGuard.tsx",
+          "hash": "18244607261565007444",
+          "deps": [
+            "npm:react",
+            "npm:react-router"
+          ]
+        },
+        {
+          "file": "libs/core/src/guards/PublicGuard.tsx",
+          "hash": "11862607951324123567",
+          "deps": [
+            "npm:react",
+            "npm:react-router"
+          ]
+        },
+        {
+          "file": "libs/core/src/guards/index.ts",
+          "hash": "9101848303488185686"
+        },
+        {
+          "file": "libs/core/src/helper.ts",
+          "hash": "734750446315147549"
+        },
+        {
+          "file": "libs/core/src/http.ts",
+          "hash": "4507648232239525505",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "libs/core/src/index.ts",
+          "hash": "10409386747712871290"
+        },
+        {
+          "file": "libs/core/src/models/Base.ts",
+          "hash": "17972903835537714878"
+        },
+        {
+          "file": "libs/core/src/promise.ts",
+          "hash": "3211236399249019830"
+        },
+        {
+          "file": "libs/core/src/search.ts",
+          "hash": "2416225818666595892"
+        },
+        {
+          "file": "libs/core/src/shared/index.ts",
+          "hash": "668964716142520848"
+        },
+        {
+          "file": "libs/core/src/shared/menu.utils.tsx",
+          "hash": "8936611741719361770",
+          "deps": [
+            "npm:react-router",
+            "shared-types"
+          ]
+        },
+        {
+          "file": "libs/core/src/shared/permissions.ts",
+          "hash": "13455008725592907971"
+        },
+        {
+          "file": "libs/core/src/sleep.ts",
+          "hash": "11160077427111460236"
+        },
+        {
+          "file": "libs/core/tsconfig.json",
+          "hash": "3503848545022935953"
+        },
+        {
+          "file": "libs/core/tsconfig.lib.json",
+          "hash": "16555714294008316221"
         }
       ],
       "mocks": [
@@ -991,6 +1460,142 @@
         {
           "file": "libs/mocks/tsconfig.lib.json",
           "hash": "16555714294008316221"
+        }
+      ],
+      "contexts": [
+        {
+          "file": "libs/contexts/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/contexts/README.md",
+          "hash": "5523431783828381896"
+        },
+        {
+          "file": "libs/contexts/project.json",
+          "hash": "723536658765851405"
+        },
+        {
+          "file": "libs/contexts/src/index.ts",
+          "hash": "3322385407278028633"
+        },
+        {
+          "file": "libs/contexts/src/lib/contexts/LoadingContext.tsx",
+          "hash": "6717481943336279922",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/contexts/src/lib/contexts/index.ts",
+          "hash": "12577406802367087006"
+        },
+        {
+          "file": "libs/contexts/src/lib/providers/LoadingProvider.tsx",
+          "hash": "13604101641250067517",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/contexts/src/lib/providers/index.ts",
+          "hash": "10915737686843634817"
+        },
+        {
+          "file": "libs/contexts/tsconfig.json",
+          "hash": "14088618039610991405"
+        },
+        {
+          "file": "libs/contexts/tsconfig.lib.json",
+          "hash": "1716960421443518508"
+        }
+      ],
+      "feature-dashboard": [
+        {
+          "file": "libs/features/admin/dashboard/project.json",
+          "hash": "14524654103940225937"
+        },
+        {
+          "file": "libs/features/admin/dashboard/src/index.tsx",
+          "hash": "7141879528773363148",
+          "deps": [
+            "npm:@ant-design/icons",
+            "npm:react-router",
+            "ui",
+            "core",
+            "shared-types"
+          ]
+        },
+        {
+          "file": "libs/features/admin/dashboard/src/mock.ts",
+          "hash": "2840050302449079975"
+        },
+        {
+          "file": "libs/features/admin/dashboard/src/pages/Dashboard.tsx",
+          "hash": "7960584922928601426",
+          "deps": [
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/features/admin/dashboard/tsconfig.json",
+          "hash": "4064879888624327698"
+        },
+        {
+          "file": "libs/features/admin/dashboard/tsconfig.lib.json",
+          "hash": "15470384488222617150"
+        }
+      ],
+      "auth": [
+        {
+          "file": "libs/features/admin/auth/project.json",
+          "hash": "15064996177684320303"
+        },
+        {
+          "file": "libs/features/admin/auth/src/index.ts",
+          "hash": "9896592859410172105"
+        },
+        {
+          "file": "libs/features/admin/auth/src/pages/ForgotPassword.tsx",
+          "hash": "11741433220242902162"
+        },
+        {
+          "file": "libs/features/admin/auth/src/pages/Login.tsx",
+          "hash": "15003271401743933257",
+          "deps": [
+            "core",
+            "npm:react-router",
+            "contexts",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/features/admin/auth/src/pages/Register.tsx",
+          "hash": "8833770185915037186",
+          "deps": [
+            "npm:@ant-design/icons",
+            "npm:antd",
+            "ui",
+            "core",
+            "npm:react-router"
+          ]
+        },
+        {
+          "file": "libs/features/admin/auth/src/routes.tsx",
+          "hash": "12069815224985702444",
+          "deps": [
+            "npm:react-router",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/features/admin/auth/tsconfig.json",
+          "hash": "4064879888624327698"
+        },
+        {
+          "file": "libs/features/admin/auth/tsconfig.lib.json",
+          "hash": "13686592157879193170"
         }
       ],
       "ui": [
@@ -1686,604 +2291,6 @@
         {
           "file": "libs/ui/tsconfig.lib.json",
           "hash": "13625979502568668793"
-        }
-      ],
-      "hooks": [
-        {
-          "file": "libs/hooks/project.json",
-          "hash": "5869194428016001663"
-        },
-        {
-          "file": "libs/hooks/src/index.ts",
-          "hash": "7846011639040890338"
-        },
-        {
-          "file": "libs/hooks/src/useHasPermission.ts",
-          "hash": "17107226717338401054",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "libs/hooks/src/useKeyDown.ts",
-          "hash": "4000140202527091087",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "libs/hooks/src/useMediaQuery.ts",
-          "hash": "4558990085386101140",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "libs/hooks/src/useMounted.ts",
-          "hash": "15757182969162767693",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "libs/hooks/tsconfig.json",
-          "hash": "13571554262532977425"
-        },
-        {
-          "file": "libs/hooks/tsconfig.lib.json",
-          "hash": "847953140782770199"
-        }
-      ],
-      "feature-users": [
-        {
-          "file": "libs/features/admin/users/project.json",
-          "hash": "13390306173114935343"
-        },
-        {
-          "file": "libs/features/admin/users/src/components/UserFormModal.tsx",
-          "hash": "12832886808695105998",
-          "deps": [
-            "npm:react",
-            "npm:antd",
-            "ui",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/users/src/hooks/useUserStore.ts",
-          "hash": "17165630780796426872",
-          "deps": [
-            "npm:zustand",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/users/src/index.tsx",
-          "hash": "510789034455872271",
-          "deps": [
-            "npm:@ant-design/icons",
-            "npm:react-router",
-            "ui",
-            "core",
-            "shared-types"
-          ]
-        },
-        {
-          "file": "libs/features/admin/users/src/pages/UserDetail.tsx",
-          "hash": "4406991031890125160",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "npm:@ant-design/icons",
-            "ui"
-          ]
-        },
-        {
-          "file": "libs/features/admin/users/src/pages/UserList.tsx",
-          "hash": "4838218975401132759",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "npm:antd",
-            "npm:@ant-design/icons",
-            "auth",
-            "ui",
-            "core",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/users/src/services/user.service.ts",
-          "hash": "11307565515883545382",
-          "deps": [
-            "core",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/users/tsconfig.json",
-          "hash": "4064879888624327698"
-        },
-        {
-          "file": "libs/features/admin/users/tsconfig.lib.json",
-          "hash": "15470384488222617150"
-        }
-      ],
-      "core": [
-        {
-          "file": "libs/core/project.json",
-          "hash": "4077257792841683183"
-        },
-        {
-          "file": "libs/core/src/breadcrumb.utils.ts",
-          "hash": "3875518321968838391"
-        },
-        {
-          "file": "libs/core/src/cache.ts",
-          "hash": "8740351036945547934"
-        },
-        {
-          "file": "libs/core/src/configs/auth.config.ts",
-          "hash": "16979071156249353628"
-        },
-        {
-          "file": "libs/core/src/configs/rbac.config.ts",
-          "hash": "6295026239787588160"
-        },
-        {
-          "file": "libs/core/src/constants.ts",
-          "hash": "8829639718961336202"
-        },
-        {
-          "file": "libs/core/src/dayjs.ts",
-          "hash": "13539723947868513202",
-          "deps": [
-            "npm:dayjs"
-          ]
-        },
-        {
-          "file": "libs/core/src/export.utils.ts",
-          "hash": "10212958668632017522",
-          "deps": [
-            "npm:xlsx"
-          ]
-        },
-        {
-          "file": "libs/core/src/guards/PermissionGuard.tsx",
-          "hash": "8352975521805815470",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "hooks"
-          ]
-        },
-        {
-          "file": "libs/core/src/guards/PrivateGuard.tsx",
-          "hash": "18244607261565007444",
-          "deps": [
-            "npm:react",
-            "npm:react-router"
-          ]
-        },
-        {
-          "file": "libs/core/src/guards/PublicGuard.tsx",
-          "hash": "11862607951324123567",
-          "deps": [
-            "npm:react",
-            "npm:react-router"
-          ]
-        },
-        {
-          "file": "libs/core/src/guards/index.ts",
-          "hash": "9101848303488185686"
-        },
-        {
-          "file": "libs/core/src/helper.ts",
-          "hash": "734750446315147549"
-        },
-        {
-          "file": "libs/core/src/http.ts",
-          "hash": "4507648232239525505",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "libs/core/src/index.ts",
-          "hash": "10409386747712871290"
-        },
-        {
-          "file": "libs/core/src/models/Base.ts",
-          "hash": "17972903835537714878"
-        },
-        {
-          "file": "libs/core/src/promise.ts",
-          "hash": "3211236399249019830"
-        },
-        {
-          "file": "libs/core/src/search.ts",
-          "hash": "2416225818666595892"
-        },
-        {
-          "file": "libs/core/src/shared/index.ts",
-          "hash": "8332694231797438111"
-        },
-        {
-          "file": "libs/core/src/shared/menu.utils.tsx",
-          "hash": "8936611741719361770",
-          "deps": [
-            "npm:react-router",
-            "shared-types"
-          ]
-        },
-        {
-          "file": "libs/core/src/sleep.ts",
-          "hash": "11160077427111460236"
-        },
-        {
-          "file": "libs/core/tsconfig.json",
-          "hash": "3503848545022935953"
-        },
-        {
-          "file": "libs/core/tsconfig.lib.json",
-          "hash": "16555714294008316221"
-        }
-      ],
-      "contexts": [
-        {
-          "file": "libs/contexts/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/contexts/README.md",
-          "hash": "5523431783828381896"
-        },
-        {
-          "file": "libs/contexts/project.json",
-          "hash": "723536658765851405"
-        },
-        {
-          "file": "libs/contexts/src/index.ts",
-          "hash": "3322385407278028633"
-        },
-        {
-          "file": "libs/contexts/src/lib/contexts/LoadingContext.tsx",
-          "hash": "6717481943336279922",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "libs/contexts/src/lib/contexts/index.ts",
-          "hash": "12577406802367087006"
-        },
-        {
-          "file": "libs/contexts/src/lib/providers/LoadingProvider.tsx",
-          "hash": "13604101641250067517",
-          "deps": [
-            "npm:react",
-            "ui"
-          ]
-        },
-        {
-          "file": "libs/contexts/src/lib/providers/index.ts",
-          "hash": "10915737686843634817"
-        },
-        {
-          "file": "libs/contexts/tsconfig.json",
-          "hash": "14088618039610991405"
-        },
-        {
-          "file": "libs/contexts/tsconfig.lib.json",
-          "hash": "1716960421443518508"
-        }
-      ],
-      "feature-products": [
-        {
-          "file": "libs/features/admin/products/project.json",
-          "hash": "6607725288800239342"
-        },
-        {
-          "file": "libs/features/admin/products/src/components/ProductFormModal.tsx",
-          "hash": "13072410523367537736",
-          "deps": [
-            "npm:react",
-            "npm:antd",
-            "ui",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/products/src/hooks/useProductStore.ts",
-          "hash": "398819177970044363",
-          "deps": [
-            "npm:zustand",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/products/src/index.tsx",
-          "hash": "84315808136960299",
-          "deps": [
-            "npm:@ant-design/icons",
-            "npm:react-router",
-            "ui",
-            "core",
-            "shared-types"
-          ]
-        },
-        {
-          "file": "libs/features/admin/products/src/pages/ProductDetail.tsx",
-          "hash": "14387724255170579576",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "npm:@ant-design/icons",
-            "ui"
-          ]
-        },
-        {
-          "file": "libs/features/admin/products/src/pages/ProductList.tsx",
-          "hash": "1132479058517336798",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "npm:antd",
-            "npm:@ant-design/icons",
-            "auth",
-            "ui",
-            "core",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/products/src/services/product.service.ts",
-          "hash": "3310057705640034200",
-          "deps": [
-            "core",
-            "mocks"
-          ]
-        },
-        {
-          "file": "libs/features/admin/products/tsconfig.json",
-          "hash": "4064879888624327698"
-        },
-        {
-          "file": "libs/features/admin/products/tsconfig.lib.json",
-          "hash": "15470384488222617150"
-        }
-      ],
-      "admin-portal": [
-        {
-          "file": "apps/admin-portal/.env.development",
-          "hash": "7149661830759011990"
-        },
-        {
-          "file": "apps/admin-portal/.env.prod",
-          "hash": "8296036928798054479"
-        },
-        {
-          "file": "apps/admin-portal/.env.staging",
-          "hash": "8766948274673310372"
-        },
-        {
-          "file": "apps/admin-portal/REFACTOR-LIBS.md",
-          "hash": "13846467987083511395"
-        },
-        {
-          "file": "apps/admin-portal/index.html",
-          "hash": "14508147696414745812"
-        },
-        {
-          "file": "apps/admin-portal/project.json",
-          "hash": "1084841579398078733"
-        },
-        {
-          "file": "apps/admin-portal/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/admin-portal/src/app/Root.tsx",
-          "hash": "366678919243887084",
-          "deps": [
-            "contexts"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/app.module.css",
-          "hash": "8887387885984320532"
-        },
-        {
-          "file": "apps/admin-portal/src/app/configs/breadcrumb.config.ts",
-          "hash": "10189941640217451180",
-          "deps": [
-            "core"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/index.ts",
-          "hash": "6514110571342584903"
-        },
-        {
-          "file": "apps/admin-portal/src/app/layout/AdminTemplate.tsx",
-          "hash": "1739501077646683178",
-          "deps": [
-            "npm:clsx",
-            "npm:react",
-            "npm:react-router",
-            "npm:antd",
-            "theme",
-            "hooks",
-            "core"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/layout/AppBreadcrumb.tsx",
-          "hash": "12774642426248134842",
-          "deps": [
-            "npm:clsx",
-            "npm:react-router",
-            "ui",
-            "theme"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/layout/AppHeader.tsx",
-          "hash": "679968508277559427",
-          "deps": [
-            "npm:clsx",
-            "core",
-            "theme",
-            "hooks",
-            "npm:@ant-design/icons",
-            "npm:antd",
-            "ui",
-            "npm:react-router"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/layout/AppSidebar.tsx",
-          "hash": "4602889287636878800",
-          "deps": [
-            "npm:clsx",
-            "npm:antd",
-            "ui",
-            "npm:react-router",
-            "shared-types",
-            "theme"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/layout/AuthTemplate.tsx",
-          "hash": "13989268237675472778",
-          "deps": [
-            "npm:react-router"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/layout/SidebarLogo.tsx",
-          "hash": "2602907640198410626",
-          "deps": [
-            "npm:@ant-design/icons",
-            "ui",
-            "theme",
-            "npm:clsx"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/layout/index.ts",
-          "hash": "10548382070044743516"
-        },
-        {
-          "file": "apps/admin-portal/src/app/routing/index.tsx",
-          "hash": "17340427282723022311",
-          "deps": [
-            "npm:react-router",
-            "npm:react",
-            "ui",
-            "feature-dashboard",
-            "feature-users",
-            "feature-products",
-            "feature-orders",
-            "auth"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/routing/menu.tsx",
-          "hash": "11132206819625291741",
-          "deps": [
-            "npm:react",
-            "npm:react-router",
-            "shared-types"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/app/routing/menuItems.ts",
-          "hash": "9991797586156236862",
-          "deps": [
-            "shared-types",
-            "feature-dashboard",
-            "feature-users",
-            "feature-products",
-            "feature-orders"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/admin-portal/src/main.tsx",
-          "hash": "11452609913503858277",
-          "deps": [
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/src/styles.css",
-          "hash": "3080282421501116443"
-        },
-        {
-          "file": "apps/admin-portal/tsconfig.app.json",
-          "hash": "7239237436127128979"
-        },
-        {
-          "file": "apps/admin-portal/tsconfig.json",
-          "hash": "10766838007533249304"
-        },
-        {
-          "file": "apps/admin-portal/vite.config.mts",
-          "hash": "16843585825101184914",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react",
-            "npm:@nx/vite"
-          ]
-        },
-        {
-          "file": "apps/admin-portal/vite.config.ts",
-          "hash": "11901489224078721383",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react"
-          ]
-        }
-      ],
-      "feature-dashboard": [
-        {
-          "file": "libs/features/admin/dashboard/project.json",
-          "hash": "14524654103940225937"
-        },
-        {
-          "file": "libs/features/admin/dashboard/src/index.tsx",
-          "hash": "7141879528773363148",
-          "deps": [
-            "npm:@ant-design/icons",
-            "npm:react-router",
-            "ui",
-            "core",
-            "shared-types"
-          ]
-        },
-        {
-          "file": "libs/features/admin/dashboard/src/mock.ts",
-          "hash": "2840050302449079975"
-        },
-        {
-          "file": "libs/features/admin/dashboard/src/pages/Dashboard.tsx",
-          "hash": "7960584922928601426",
-          "deps": [
-            "ui"
-          ]
-        },
-        {
-          "file": "libs/features/admin/dashboard/tsconfig.json",
-          "hash": "4064879888624327698"
-        },
-        {
-          "file": "libs/features/admin/dashboard/tsconfig.lib.json",
-          "hash": "15470384488222617150"
         }
       ]
     }
