@@ -1,6 +1,6 @@
 import React, { Fragment, ReactElement, ReactNode, useLayoutEffect } from 'react';
 import { Navigate } from 'react-router';
-import { cache, AUTH_USER_CACHE_KEY } from '@core';
+import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
 import useAuthStore from '../store/useAuthStore';
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 };
 
 export function PrivateGuard({ children }: Props) {
-  const cached = cache.getCache(AUTH_USER_CACHE_KEY)?.data as { token?: string } | undefined;
+  const cached = cache.getCache(AUTH_ADMIN_CACHE_KEY)?.data as { token?: string } | undefined;
   const hasToken = !!cached?.token;
   const roles = useAuthStore((s) => s.roles);
   const hydrateFromCache = useAuthStore((s) => s.hydrateFromCache);

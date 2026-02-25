@@ -20,7 +20,6 @@ mono-repo-react-sample/
 │   ├── feature-orders/  # @features/admin/feature-orders
 │   ├── mocks/           # @mocks — users, products, orders mock data
 │   ├── theme/           # @theme — design tokens, tailwindExtend
-│   ├── api-client/      # @src/api-client — re-exports http from core
 │   └── test-utils/      # @src/test-utils — shared test helpers (placeholder)
 ```
 
@@ -314,8 +313,8 @@ Use these usernames on the login page (password arbitrary) to test roles:
 
 - **NX monorepo**: Added `nx`, `@nx/workspace`, `@nx/react`, `@nx/vite`; `nx.json`, `tsconfig.base.json`, `pnpm-workspace.yaml`.
 - **App**: New app `admin-portal` under `apps/` (routing, providers, assets, env); dev/build via `nx serve` / `nx build`.
-- **Libs**: `@ui`, `@core`, `@shared-types`, `@hooks`, `@features/admin/auth`, `@features/admin/feature-dashboard`, `@features/admin/feature-users`, `@features/admin/feature-products`, `@features/admin/feature-orders`, `@mocks`, `@theme`, `@src/api-client`, `@src/test-utils`.
-- **Auth**: Guards, useAuthStore, useHasPermission, RBAC config, LoadingProvider in `libs/features/admin/auth`; uses `AUTH_USER_CACHE_KEY` from core.
+- **Libs**: `@ui`, `@core`, `@shared-types`, `@hooks`, `@features/admin/auth`, `@features/admin/feature-dashboard`, `@features/admin/feature-users`, `@features/admin/feature-products`, `@features/admin/feature-orders`, `@mocks`, `@theme`, `@src/test-utils`.
+- **Auth**: Guards, useAuthStore, useHasPermission, RBAC config, LoadingProvider in `libs/features/admin/auth`; uses `AUTH_ADMIN_CACHE_KEY` from core.
 - **Storybook**: Config moved to `libs/ui/.storybook`; one co-located story (`AppButton.stories.tsx`); existing stories still under `src/stories`.
 - **Improvements**: Affected CI scripts; theme tokens in `@theme`; api-client re-export; test-utils placeholder; module boundary rules in `.eslintrc.json`.
 

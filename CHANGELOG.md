@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - Separated `AuthLayout` and `MasterLayout` for public and private areas.
   - Automatic route loading from feature modules (`home`, `auth`).
 - Basic authentication flow:
-  - Token stored in local storage via `cache` and `LOCAL_USER_KEY`.
+  - Token stored in local storage via `cache` and `ADMIN_KEY`.
   - `PrivateGuard` and `PublicGuard` for protecting routes.
   - Demo `Login` page with sign-in flow and redirect to `/`.
 - Feature modules & pages:

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import { cache, AUTH_USER_CACHE_KEY } from '@core';
-import { getPermissionsForRoles } from '../config/rbac.config';
+import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
+import { getPermissionsForRoles } from '@core';
 import { getRolesForUsername } from '../services/auth.service';
 
 interface AuthState {
@@ -20,7 +20,7 @@ const useAuthStore = create<AuthState>()((set) => ({
   clearRolesAndPermissions: () => set({ roles: [], permissions: [] }),
 
   hydrateFromCache: () => {
-    const cached = cache.getCache(AUTH_USER_CACHE_KEY)?.data as { username?: string } | undefined;
+    const cached = cache.getCache(AUTH_ADMIN_CACHE_KEY)?.data as { username?: string } | undefined;
     const username = cached?.username;
     if (!username) return;
     const roles = getRolesForUsername(username);

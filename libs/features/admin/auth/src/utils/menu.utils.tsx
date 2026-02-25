@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { IMenuItem } from '@shared-types';
-import { getPermissionsForRoles } from '../config/rbac.config';
+import { getPermissionsForRoles } from '@core';
 import useAuthStore from '../store/useAuthStore';
 
 type GetItemProps = {

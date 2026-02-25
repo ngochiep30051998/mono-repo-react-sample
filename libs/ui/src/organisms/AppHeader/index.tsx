@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { cache, AUTH_USER_CACHE_KEY } from '@core';
+import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
 import { useAuthStore } from '@features/admin/auth';
 import { useThemeStore } from '@theme';
 import { useMediaQuery } from '@hooks';
@@ -17,12 +17,12 @@ export default function AppHeader() {
   const isMobile = !useMediaQuery('(min-width: 992px)');
   const isDark = themeMode === 'dark';
 
-  const cached = cache.getCache(AUTH_USER_CACHE_KEY)?.data as { username?: string } | undefined;
+  const cached = cache.getCache(AUTH_ADMIN_CACHE_KEY)?.data as { username?: string } | undefined;
   const username = cached?.username ?? 'User';
   const clearRolesAndPermissions = useAuthStore((s) => s.clearRolesAndPermissions);
 
   const handleLogout = () => {
-    cache.remove(AUTH_USER_CACHE_KEY);
+    cache.remove(AUTH_ADMIN_CACHE_KEY);
     clearRolesAndPermissions();
     navigate('/login');
   };

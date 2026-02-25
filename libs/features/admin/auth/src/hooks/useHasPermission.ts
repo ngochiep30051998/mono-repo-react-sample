@@ -1,4 +1,4 @@
-import { getPermissionsForRoles } from '../config/rbac.config';
+import { getPermissionsForRoles } from '@core';
 import useAuthStore from '../store/useAuthStore';
 
 export function useHasPermission(permission: string): boolean {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { transformReq } from './helper';
 import cache from './cache';
-import { AUTH_USER_CACHE_KEY } from './constants';
+import { AUTH_ADMIN_CACHE_KEY } from './constants';
 
 const getBaseURL = () =>
   (typeof import.meta !== 'undefined' &&
@@ -13,7 +13,7 @@ const HTTP = axios.create({
 });
 
 HTTP.interceptors.request.use((req) => {
-  const cached = cache.getCache(AUTH_USER_CACHE_KEY);
+  const cached = cache.getCache(AUTH_ADMIN_CACHE_KEY);
   const token = (cached?.data as { token?: string } | undefined)?.token;
   if (token && req.headers) {
     req.headers['Authorization'] = `Bearer ${token}`;

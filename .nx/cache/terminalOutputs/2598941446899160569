@@ -29,7 +29,7 @@
   Plugin: [35mvite:import-analysis[39m
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
 [33m  1  |  import { create } from "zustand";
-  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  2  |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   3  |  import { getPermissionsForRoles } from "../config/rbac.config";
   4  |  import { getRolesForUsername } from "../services/auth.service";[39m
@@ -37,7 +37,7 @@
   Plugin: [35mvite:import-analysis[39m
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
 [33m  1  |  import { create } from "zustand";
-  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  2  |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   3  |  import { getPermissionsForRoles } from "../config/rbac.config";
   4  |  import { getRolesForUsername } from "../services/auth.service";[39m
@@ -45,16 +45,16 @@
   Plugin: [35mvite:import-analysis[39m
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
 [33m  1  |  import { create } from "zustand";
-  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  2  |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   3  |  import { getPermissionsForRoles } from "../config/rbac.config";
   4  |  import { getRolesForUsername } from "../services/auth.service";[39m
 [2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/config/auth.config.ts". Does the file exist?
   Plugin: [35mvite:import-analysis[39m
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/config/auth.config.ts[39m:1:36
-[33m  1  |  import { AUTH_USER_CACHE_KEY } from "@core";
+[33m  1  |  import { AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                       ^
-  2  |  export const LOCAL_USER_KEY = AUTH_USER_CACHE_KEY;
+  2  |  export const ADMIN_KEY = AUTH_ADMIN_CACHE_KEY;
   3  |  [39m
 [2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@core" from "libs/features/admin/auth/src/services/auth.service.ts". Does the file exist?
   Plugin: [35mvite:import-analysis[39m
@@ -68,10 +68,10 @@
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/guards/PublicGuard.tsx[39m:3:43
 [33m  17 |  import { Fragment } from "react";
   18 |  import { Navigate } from "react-router";
-  19 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  19 |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   20 |  export function PublicGuard({ children }) {
-  21 |    const cached = cache.getCache(AUTH_USER_CACHE_KEY)?.data;[39m
+  21 |    const cached = cache.getCache(AUTH_ADMIN_CACHE_KEY)?.data;[39m
 [2m3:45:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@ui" from "libs/features/admin/auth/src/providers/LoadingProvider.tsx". Does the file exist?
   Plugin: [35mvite:import-analysis[39m
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/providers/LoadingProvider.tsx[39m:3:34
@@ -85,7 +85,7 @@
   Plugin: [35mvite:import-analysis[39m
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/store/useAuthStore.ts[39m:2:43
 [33m  1  |  import { create } from "zustand";
-  2  |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  2  |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   3  |  import { getPermissionsForRoles } from "../config/rbac.config";
   4  |  import { getRolesForUsername } from "../services/auth.service";[39m
@@ -94,7 +94,7 @@
   File: [36mD:/projects/mono-repo-react-sample/libs/features/admin/auth/src/guards/PrivateGuard.tsx[39m:3:43
 [33m  18 |  import { Fragment, useLayoutEffect } from "react";
   19 |  import { Navigate } from "react-router";
-  20 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  20 |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   21 |  import useAuthStore from "../store/useAuthStore";
   22 |  export function PrivateGuard({ children }) {[39m
@@ -130,7 +130,7 @@
   File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppHeader.tsx[39m:2:43
 [33m  17 |  var _s = $RefreshSig$();
   18 |  import clsx from "clsx";
-  19 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  19 |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   20 |  import { useAuthStore } from "@features/admin/auth";
   21 |  import { useThemeStore } from "@theme";[39m
@@ -175,7 +175,7 @@
   File: [36mD:/projects/mono-repo-react-sample/apps/admin-portal/src/app/layout/AppHeader.tsx[39m:2:43
 [33m  17 |  var _s = $RefreshSig$();
   18 |  import clsx from "clsx";
-  19 |  import { cache, AUTH_USER_CACHE_KEY } from "@core";
+  19 |  import { cache, AUTH_ADMIN_CACHE_KEY } from "@core";
      |                                              ^
   20 |  import { useAuthStore } from "@features/admin/auth";
   21 |  import { useThemeStore } from "@theme";[39m

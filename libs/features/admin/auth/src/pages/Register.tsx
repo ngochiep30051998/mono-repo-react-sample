@@ -1,9 +1,9 @@
 import { MailOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Typography } from 'antd';
 import { GoogleIcon, FacebookIcon } from '@ui';
-import { cache, AUTH_USER_CACHE_KEY } from '@core';
+import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
 import useAuthStore from '../store/useAuthStore';
-import { getPermissionsForRoles, ROLES } from '../config/rbac.config';
+import { getPermissionsForRoles, ROLES } from '@core';
 import { Link, useNavigate } from 'react-router';
 
 const { Title, Text } = Typography;
@@ -23,7 +23,7 @@ export default function Register() {
   const handleFinish = (values: RegisterFormValues) => {
     const roles = [ROLES.ADMIN];
     const permissions = getPermissionsForRoles(roles);
-    cache.setCache(AUTH_USER_CACHE_KEY, {
+    cache.setCache(AUTH_ADMIN_CACHE_KEY, {
       token: 'demo-token',
       username: values.username,
       email: values.email,

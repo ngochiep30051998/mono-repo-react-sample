@@ -1,5 +1,5 @@
 import { sleep } from '@core';
-import { ROLES } from '../config/rbac.config';
+import { ROLES } from '@core';
 
 export function getRolesForUsername(username: string): string[] {
   const normalized = username?.trim().toLowerCase() ?? '';
