@@ -59,7 +59,11 @@
       "@src/test-utils": ["libs/test-utils/src/index.ts"],
       "@src/test-utils/*": ["libs/test-utils/src/*"],
       "@contexts": ["libs/contexts/src/index.ts"],
-      "@contexts/*": ["libs/contexts/src/*"]
+      "@contexts/*": ["libs/contexts/src/*"],
+      "@stores": ["libs/stores/src/index.ts"],
+      "@stores/*": ["libs/stores/src/*"],
+      "@services": ["libs/services/src/index.ts"],
+      "@services/*": ["libs/services/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { IMenuItem } from '@shared-types';
 import { getPermissionsForRoles } from '@core';
-import useAuthStore from '../store/useAuthStore';
+import { useAuthStore } from '@stores';
 
 type GetItemProps = {
   to: string;

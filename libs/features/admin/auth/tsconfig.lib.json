@@ -5,7 +5,7 @@
     "declaration": true,
     "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "../../../stores/src/lib/useAuthStore.ts", "../../../services/src/lib/auth.service.ts", "../../../hooks/src/useHasPermission.ts"],
   "exclude": ["**/*.spec.ts", "**/*.spec.tsx"]
 }
 

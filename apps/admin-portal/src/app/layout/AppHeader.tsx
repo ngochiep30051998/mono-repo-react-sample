@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
-import { useAuthStore } from '@features/admin/auth';
+import { useAuthStore } from '@stores';
 import { useThemeStore } from '@theme';
 import { useMediaQuery } from '@hooks';
 import { MenuFoldOutlined, MenuUnfoldOutlined, DashboardOutlined, UserOutlined } from '@ant-design/icons';

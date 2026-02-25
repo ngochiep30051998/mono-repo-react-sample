@@ -1,5 +1,5 @@
 import { getPermissionsForRoles } from '@core';
-import useAuthStore from '../store/useAuthStore';
+import { useAuthStore } from '@stores';
 
 export function useHasPermission(permission: string): boolean {
   const roles = useAuthStore((s) => s.roles);

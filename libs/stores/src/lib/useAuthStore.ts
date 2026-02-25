@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
 import { getPermissionsForRoles } from '@core';
-import { getRolesForUsername } from '../services/auth.service';
+import { getRolesForUsername } from '@services';
 
 interface AuthState {
   roles: string[];
@@ -29,4 +29,4 @@ const useAuthStore = create<AuthState>()((set) => ({
   },
 }));
 
-export default useAuthStore;
+export { useAuthStore };

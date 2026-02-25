@@ -28,6 +28,8 @@ export default defineConfig(({ mode }) => {
         '@mocks': path.join(root, 'libs/mocks/src'),
         '@theme': path.join(root, 'libs/theme/src'),
         '@contexts': path.join(root, 'libs/contexts/src'),
+        '@stores': path.join(root, 'libs/stores/src'),
+        '@services': path.join(root, 'libs/services/src'),
       },
     },
     build: {

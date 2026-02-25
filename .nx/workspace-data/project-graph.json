@@ -11509,7 +11509,17 @@
       },
       {
         "source": "auth",
+        "target": "hooks",
+        "type": "static"
+      },
+      {
+        "source": "auth",
         "target": "core",
+        "type": "static"
+      },
+      {
+        "source": "auth",
+        "target": "contexts",
         "type": "static"
       },
       {
@@ -11525,11 +11535,6 @@
       {
         "source": "auth",
         "target": "npm:antd",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "npm:zustand",
         "type": "static"
       },
       {
@@ -11685,6 +11690,11 @@
     "hooks": [
       {
         "source": "hooks",
+        "target": "core",
+        "type": "static"
+      },
+      {
+        "source": "hooks",
         "target": "npm:react",
         "type": "static"
       }
@@ -11757,7 +11767,7 @@
       },
       {
         "source": "ui",
-        "target": "auth",
+        "target": "hooks",
         "type": "static"
       },
       {
@@ -11772,17 +11782,17 @@
       },
       {
         "source": "ui",
-        "target": "hooks",
-        "type": "static"
-      },
-      {
-        "source": "ui",
         "target": "npm:recharts",
         "type": "static"
       },
       {
         "source": "ui",
         "target": "mocks",
+        "type": "static"
+      },
+      {
+        "source": "ui",
+        "target": "auth",
         "type": "static"
       }
     ],
@@ -25513,5 +25523,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1772009569368
+  "computedAt": 1772010938628
 }

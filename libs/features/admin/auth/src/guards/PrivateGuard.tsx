@@ -1,7 +1,7 @@
 import React, { Fragment, ReactElement, ReactNode, useLayoutEffect } from 'react';
 import { Navigate } from 'react-router';
 import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
-import useAuthStore from '../store/useAuthStore';
+import { useAuthStore } from '@stores';
 
 type Props = {
   children: ReactNode | ReactElement;

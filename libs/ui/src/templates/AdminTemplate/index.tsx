@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { Outlet } from 'react-router';
 import { App, ConfigProvider, Drawer, theme } from 'antd';
 import type { ThemeConfig } from 'antd';
-import { useAuthStore } from '@features/admin/auth';
+import { useAuthStore } from '@stores';
 import { useThemeStore } from '@theme';
 import { useMediaQuery } from '@hooks';
 import { filterMenuByPermission } from '@features/admin/auth';

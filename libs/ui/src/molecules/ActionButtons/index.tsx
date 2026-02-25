@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Button, Space } from 'antd';
-import { useHasPermission } from '@features/admin/auth';
+import { useHasPermission } from '@hooks';
 
 interface ActionButtonsProps {
   onEdit?: () => void;

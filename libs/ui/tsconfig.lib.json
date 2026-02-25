@@ -12,7 +12,15 @@
       "@templates/*": ["src/templates/*"],
       "@utils/*": ["src/utils/*"],
       "@core": ["../core/src/index.ts"],
-      "@core/*": ["../core/src/*"]
+      "@core/*": ["../core/src/*"],
+      "@hooks": ["../hooks/src/index.ts"],
+      "@hooks/*": ["../hooks/src/*"],
+      "@theme": ["../theme/src/index.ts"],
+      "@theme/*": ["../theme/src/*"],
+      "@stores": ["../stores/src/index.ts"],
+      "@stores/*": ["../stores/src/*"],
+      "@services": ["../services/src/index.ts"],
+      "@services/*": ["../services/src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
