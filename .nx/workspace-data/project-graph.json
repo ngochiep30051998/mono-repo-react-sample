@@ -469,6 +469,20 @@
         "implicitDependencies": []
       }
     },
+    "contexts": {
+      "name": "contexts",
+      "type": "lib",
+      "data": {
+        "root": "libs/contexts",
+        "name": "contexts",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/contexts/src",
+        "projectType": "library",
+        "tags": [],
+        "targets": {},
+        "implicitDependencies": []
+      }
+    },
     "hooks": {
       "name": "hooks",
       "type": "lib",
@@ -11549,7 +11563,7 @@
     "admin-portal": [
       {
         "source": "admin-portal",
-        "target": "auth",
+        "target": "contexts",
         "type": "static"
       },
       {
@@ -11585,6 +11599,11 @@
       {
         "source": "admin-portal",
         "target": "hooks",
+        "type": "static"
+      },
+      {
+        "source": "admin-portal",
+        "target": "auth",
         "type": "static"
       },
       {
@@ -11651,6 +11670,18 @@
       }
     ],
     "test-utils": [],
+    "contexts": [
+      {
+        "source": "contexts",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "contexts",
+        "target": "ui",
+        "type": "static"
+      }
+    ],
     "hooks": [
       {
         "source": "hooks",
@@ -25482,5 +25513,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1772007263656
+  "computedAt": 1772009569368
 }

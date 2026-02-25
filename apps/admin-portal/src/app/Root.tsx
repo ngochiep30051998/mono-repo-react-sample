@@ -1,4 +1,4 @@
-import { LoadingProvider } from '@features/admin/auth';
+import { LoadingProvider } from '@contexts';
 import Router from './routing';
 
 const Root = () => {

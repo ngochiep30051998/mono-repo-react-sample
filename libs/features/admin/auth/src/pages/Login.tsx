@@ -1,6 +1,6 @@
 import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
 import { useNavigate } from 'react-router';
-import { useLoading } from '../contexts/LoadingContext';
+import { useLoading } from '@contexts';
 import { LoginForm, type LoginFormValues } from '@ui';
 import { getRolesFromBackend } from '../services/auth.service';
 import { getPermissionsForRoles } from '@core';

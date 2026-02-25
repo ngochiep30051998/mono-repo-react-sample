@@ -11,7 +11,5 @@ export {
   ROLE_PERMISSIONS,
   getPermissionsForRoles,
 } from '@core';
-export { LoadingContext, useLoading } from './contexts/LoadingContext';
-export { LoadingProvider } from './providers/LoadingProvider';
 export { getItem, filterMenuByPermission } from './utils/menu.utils';
 export { AuthRouter } from './routes';

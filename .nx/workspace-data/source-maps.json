@@ -9,147 +9,147 @@
       "nx/core/project-json"
     ],
     "targets": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.dev": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.continuous": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.options": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.executor": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.options.cwd": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.options.command": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata.technologies": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata.technologies.0": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata.description": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata.help": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata.help.command": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata.help.example": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.cache": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.inputs": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.options": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.executor": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.options.cwd": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.options.command": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata.description": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata.technologies": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata.technologies.0": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata.help": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata.help.command": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata.help.example": [
-      "apps/admin-portal/vite.config.ts",
+      "apps/admin-portal/vite.config.mts",
       "@nx/vite/plugin"
     ],
     "targets.watch-deps": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.watch-deps.continuous": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.watch-deps.dependsOn": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.watch-deps.executor": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.watch-deps.options": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.watch-deps.options.command": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.dev.metadata.technologies.1": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "targets.typecheck.metadata.technologies.1": [
-      "apps/admin-portal/vite.config.mts",
+      "apps/admin-portal/vite.config.ts",
       "@nx/vite/plugin"
     ],
     "name": [
@@ -600,6 +600,40 @@
     ],
     "implicitDependencies.admin-portal": [
       "apps/admin-portal-e2e/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/contexts": {
+    "root": [
+      "libs/contexts/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/contexts/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/contexts/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/contexts/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/contexts/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "libs/contexts/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/contexts/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/contexts/project.json",
       "nx/core/project-json"
     ]
   },

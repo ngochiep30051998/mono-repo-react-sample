@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => {
         '@features/admin/feature-orders': path.join(root, 'libs/features/admin/orders/src'),
         '@mocks': path.join(root, 'libs/mocks/src'),
         '@theme': path.join(root, 'libs/theme/src'),
+        '@contexts': path.join(root, 'libs/contexts/src'),
       },
     },
     build: {
