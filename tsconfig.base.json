@@ -33,7 +33,7 @@
       "@features/admin/auth": ["libs/features/admin/auth/src/index.ts"],
       "@features/admin/auth/*": ["libs/features/admin/auth/src/*"],
       "@features/admin/feature-dashboard": [
-        "libs/features/admin/dashboard/src/index.ts"
+        "libs/features/admin/dashboard/src/index.tsx"
       ],
       "@features/admin/feature-dashboard/*": [
         "libs/features/admin/dashboard/src/*"

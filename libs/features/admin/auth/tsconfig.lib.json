@@ -5,7 +5,7 @@
     "declaration": true,
     "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "../../../stores/src/lib/useAuthStore.ts", "../../../services/src/lib/auth.service.ts", "../../../hooks/src/useHasPermission.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "../../../stores/src/lib/useAuthStore.ts", "../../../services/src/lib/auth.service.ts", "../../../hooks/src/useHasPermission.ts", "../../../core/src/guards/PermissionGuard.tsx", "../../../core/src/guards/PrivateGuard.tsx", "../../../core/src/guards/PublicGuard.tsx"],
   "exclude": ["**/*.spec.ts", "**/*.spec.tsx"]
 }
 

@@ -5,7 +5,7 @@ import type { ThemeConfig } from 'antd';
 import { useAuthStore } from '@stores';
 import { useThemeStore } from '@theme';
 import { useMediaQuery } from '@hooks';
-import { filterMenuByPermission } from '@features/admin/auth';
+import { filterMenuByPermission } from '@core';
 import type { IMenuItem } from '@shared-types';
 import AppHeader from '@organisms/AppHeader';
 import AppSidebar from '@organisms/AppSidebar';

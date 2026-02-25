@@ -1,7 +1,7 @@
 import { UserOutlined } from '@ant-design/icons';
 import { RouteObject } from 'react-router';
 import { loadable } from '@ui';
-import { PERMISSIONS, getItem, PermissionGuard } from '@features/admin/auth';
+import { PERMISSIONS, getItem, PermissionGuard } from '@core';
 import type { IMenuItem } from '@shared-types';
 
 const UserList = loadable(() => import('./pages/UserList'));

@@ -15,3 +15,5 @@ export {
 
 export * from './configs/rbac.config';
 export * from './configs/auth.config';
+export * from './shared';
+export * from './guards';

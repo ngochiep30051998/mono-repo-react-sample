@@ -11331,7 +11331,7 @@
       },
       {
         "source": "feature-dashboard",
-        "target": "auth",
+        "target": "core",
         "type": "static"
       },
       {
@@ -11378,7 +11378,7 @@
       },
       {
         "source": "feature-products",
-        "target": "auth",
+        "target": "core",
         "type": "static"
       },
       {
@@ -11388,7 +11388,7 @@
       },
       {
         "source": "feature-products",
-        "target": "core",
+        "target": "auth",
         "type": "static"
       }
     ],
@@ -11430,7 +11430,7 @@
       },
       {
         "source": "feature-orders",
-        "target": "auth",
+        "target": "core",
         "type": "static"
       },
       {
@@ -11440,7 +11440,7 @@
       },
       {
         "source": "feature-orders",
-        "target": "core",
+        "target": "auth",
         "type": "static"
       }
     ],
@@ -11482,7 +11482,7 @@
       },
       {
         "source": "feature-users",
-        "target": "auth",
+        "target": "core",
         "type": "static"
       },
       {
@@ -11492,29 +11492,19 @@
       },
       {
         "source": "feature-users",
-        "target": "core",
+        "target": "auth",
         "type": "static"
       }
     ],
     "auth": [
       {
         "source": "auth",
-        "target": "npm:react",
+        "target": "core",
         "type": "static"
       },
       {
         "source": "auth",
         "target": "npm:react-router",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "hooks",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "core",
         "type": "static"
       },
       {
@@ -11535,11 +11525,6 @@
       {
         "source": "auth",
         "target": "npm:antd",
-        "type": "static"
-      },
-      {
-        "source": "auth",
-        "target": "shared-types",
         "type": "static"
       }
     ],
@@ -11608,11 +11593,6 @@
       },
       {
         "source": "admin-portal",
-        "target": "auth",
-        "type": "static"
-      },
-      {
-        "source": "admin-portal",
         "target": "ui",
         "type": "static"
       },
@@ -11644,6 +11624,11 @@
       {
         "source": "admin-portal",
         "target": "feature-orders",
+        "type": "static"
+      },
+      {
+        "source": "admin-portal",
+        "target": "auth",
         "type": "static"
       },
       {
@@ -11720,7 +11705,27 @@
       },
       {
         "source": "core",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "core",
+        "target": "npm:react-router",
+        "type": "static"
+      },
+      {
+        "source": "core",
+        "target": "hooks",
+        "type": "static"
+      },
+      {
+        "source": "core",
         "target": "npm:axios",
+        "type": "static"
+      },
+      {
+        "source": "core",
+        "target": "shared-types",
         "type": "static"
       }
     ],
@@ -11788,11 +11793,6 @@
       {
         "source": "ui",
         "target": "mocks",
-        "type": "static"
-      },
-      {
-        "source": "ui",
-        "target": "auth",
         "type": "static"
       }
     ],
@@ -25523,5 +25523,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1772010938628
+  "computedAt": 1772011586573
 }

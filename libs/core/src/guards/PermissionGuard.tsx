@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Navigate } from 'react-router';
-import { useHasPermission } from '../../../../../hooks/src/useHasPermission';
+import { useHasPermission } from '../../../hooks/src/useHasPermission';
 
 interface PermissionGuardProps {
   permission: string;

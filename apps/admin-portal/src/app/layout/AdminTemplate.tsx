@@ -5,7 +5,7 @@ import { App, ConfigProvider, Drawer, theme } from 'antd';
 import type { ThemeConfig } from 'antd';
 import { useThemeStore } from '@theme';
 import { useMediaQuery } from '@hooks';
-import { filterMenuByPermission } from '@features/admin/auth';
+import { filterMenuByPermission } from '@core';
 import { useAuthStore } from '@stores';
 import { MenuItems } from '../routing/menuItems';
 import AppHeader from './AppHeader';
