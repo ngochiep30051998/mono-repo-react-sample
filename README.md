@@ -1,37 +1,50 @@
-# Admin Portal (NX Workspace)
+# Admin Portal & Vendors (NX Workspace)
 
-A modern React admin dashboard built with TypeScript, Vite, **NX** monorepo, and **Atomic Design** architecture. The main app is **Admin Portal**; shared code lives in NX libraries under the `@src` scope.
+A modern React monorepo built with TypeScript, Vite, **NX**, and **Atomic Design**. Two apps: **Admin Portal** (dashboard, users, products, orders) and **Vendors** (dashboard, classes). Shared code lives in NX libraries under path aliases such as `@ui`, `@core`, `@features/*`, etc.
 
 ## NX Workspace Structure
 
 ```
 mono-repo-react-sample/
 ├── apps/
-│   └── admin-portal/   # Main app — shell: routing, providers, entry
+│   ├── admin-portal/        # Main admin app — routing, layout, dashboard/users/products/orders
+│   ├── admin-portal-e2e/     # E2E tests for admin-portal
+│   ├── vendors/             # Vendors app — dashboard + classes feature
+│   └── vendors-e2e/         # E2E tests for vendors
 ├── libs/
-│   ├── ui/              # @ui — atoms, molecules, organisms, templates, Loadable
-│   ├── core/            # @core — http, cache, dayjs, helper, search, sleep, models
-│   ├── shared-types/    # @shared-types — types, interfaces, enums
-│   ├── hooks/           # @hooks — useKeyDown, useMediaQuery, useMounted
-│   ├── auth/            # @features/admin/auth — guards, useAuthStore, useHasPermission, RBAC, LoadingProvider
-│   ├── feature-dashboard/  # @features/admin/feature-dashboard — Router, MenuItems
-│   ├── feature-users/   # @features/admin/feature-users
-│   ├── feature-products/# @features/admin/feature-products
-│   ├── feature-orders/  # @features/admin/feature-orders
-│   ├── mocks/           # @mocks — users, products, orders mock data
-│   ├── theme/           # @theme — design tokens, tailwindExtend
-│   └── test-utils/      # @src/test-utils — shared test helpers (placeholder)
+│   ├── ui/                  # @ui — atoms, molecules, organisms, templates, utils (Loadable, RootBoundary, ScopeComponent)
+│   ├── core/                # @core — http, cache, dayjs, helpers, guards, RBAC config, auth config, menu.utils
+│   ├── shared-types/        # @shared-types — types, interfaces, enums
+│   ├── hooks/               # @hooks — useKeyDown, useMediaQuery, useMounted, useHasPermission
+│   ├── contexts/            # @contexts — LoadingProvider and context
+│   ├── stores/              # @stores — useAuthStore
+│   ├── services/            # @services — auth.service (API)
+│   ├── features/admin/
+│   │   ├── auth/            # @features/admin/auth — AuthRouter (Login, Register, ForgotPassword)
+│   │   ├── dashboard/       # @features/admin/feature-dashboard — Router, MenuItems
+│   │   ├── users/           # @features/admin/feature-users
+│   │   ├── products/        # @features/admin/feature-products
+│   │   └── orders/          # @features/admin/feature-orders
+│   ├── features/vendors/
+│   │   └── classes/         # @features/vendors/feature-classes — Router, MenuItems (used by vendors app)
+│   ├── mocks/               # @mocks — users, products, orders mock data
+│   ├── theme/               # @theme — design tokens, tailwindExtend, useThemeStore
+│   └── test-utils/          # @src/test-utils — shared test helpers (placeholder)
 ```
 
 ### Scripts
 
 | Script | Description |
 |--------|-------------|
-| `pnpm dev` | Run Admin Portal (`nx serve admin-portal`) |
-| `pnpm build` | Build the app |
+| `pnpm dev` | Run Admin Portal (`nx serve admin-portal`, default port 4200) |
+| `pnpm build` | Build admin-portal |
+| `pnpm preview` | Preview admin-portal production build |
 | `pnpm storybook` | Run Storybook for `@ui` (port 6006) |
+| `pnpm lint` | Run ESLint |
 | `pnpm affected:build` | Build only projects affected by changes (vs `origin/main`) |
 | `pnpm affected:test` | Test only affected projects |
+
+To run the **Vendors** app: `nx serve vendors`.
 
 ### Module Boundaries
 
@@ -43,137 +56,119 @@ ESLint rule `@nx/enforce-module-boundaries` (when `@nx/eslint-plugin` is install
 
 ## Tech Stack
 
-- **Frontend Framework**: React 19 with TypeScript
-- **Build Tool**: Vite 6
-- **UI Framework**: Ant Design 6 (antd)
+- **Frontend**: React 19 with TypeScript
+- **Build**: Vite 7
+- **UI**: Ant Design 6 (antd)
 - **Routing**: React Router 7
-- **State Management**: Zustand 5
-- **HTTP Client**: Axios
-- **Code Splitting**: React.lazy + Suspense
-- **Date Handling**: Day.js
+- **State**: Zustand 5
+- **HTTP**: Axios
+- **Code splitting**: React.lazy + Suspense (via `loadable` from `@ui`)
+- **Date**: Day.js
 - **Styling**: Tailwind CSS 4 + Sass
-- **Linting**: ESLint 9 (flat config) with TypeScript rules
+- **Lint**: ESLint 9 (flat config) with TypeScript
 
 ## Atomic Design Architecture
 
-This project follows the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) methodology by Brad Frost. The UI is organized into 5 hierarchical levels.
+The **UI library** (`@ui`) in `libs/ui/src` follows [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/): atoms → molecules → organisms → templates, plus `utils` (Loadable, RootBoundary, ScopeComponent).
 
 ### Component Hierarchy
 
 ```
-src/components/
-├── atoms/          ← Primitive UI elements (no business logic)
-├── molecules/      ← Compositions of atoms forming functional units
-├── organisms/      ← Complex, reusable sections (may use hooks/context)
-├── templates/      ← Page layout shells (contain <Outlet />)
-└── utils/          ← Non-visual utilities (Loadable, RootBoundary, etc.)
+libs/ui/src/
+├── atoms/           # Primitives + App* wrappers for Ant Design
+├── molecules/       # StatCard, ActionButtons, OAuthButton, UserDropdown, ThemeToggleBtn, NotificationBell, SidebarLogo, DeleteConfirm
+├── organisms/       # AppHeader, AppSidebar, AppBreadcrumb, DataTable, FilterBar, LoginForm, modals, DashboardStats, DashboardCharts, etc.
+├── templates/       # AdminTemplate, AuthTemplate
+├── utils/           # Loadable, RootBoundary, ScopeComponent
+├── StatusTag, ScopeTag, GradientAvatar, Spinner (root-level atoms)
+└── assets/icons     # GoogleIcon, FacebookIcon
 ```
 
-### Atoms — `src/components/atoms/`
+### Atoms — `libs/ui/src/atoms/`
 
-Smallest building blocks that wrap Ant Design primitives with project-level defaults.
+Primitive building blocks: status/scope tags, avatar, spinner, icon, and **App*** wrappers for Ant Design components (AppButton, AppInput, AppSelect, AppModal, AppTable, AppCard, AppTabs, AppPagination, AppDatePicker, AppTree, AppBreadcrumbList, AppMenu, AppRow, AppCol, etc.).
+
+| Component (examples) | Description |
+|---------------------|-------------|
+| `StatusTag` | Colored `<Tag>` for status values |
+| `ScopeTag` | Tag for scope display |
+| `GradientAvatar` | Icon inside a gradient box |
+| `Spinner` | Loading indicator for lazy routes |
+| `AppIcon` | Icon wrapper with size/color |
+| `AppButton`, `AppInput`, `AppSelect`, … | Ant Design wrappers with project defaults |
+
+### Molecules — `libs/ui/src/molecules/`
 
 | Component | Description |
 |-----------|-------------|
-| `StatusTag` | Colored `<Tag>` for status values (`active`, `inactive`, `pending`, etc.) |
-| `GradientAvatar` | Icon inside a gradient box (used in Sidebar logo, stat cards) |
-| `Spinner` | Bouncing-dots loading indicator for lazy-loaded routes |
-| `AppIcon` | Standardized icon wrapper with size and color props |
-
-### Molecules — `src/components/molecules/`
-
-Combinations of atoms that form a self-contained UI unit. Still "dumb" — receive data via props only.
-
-| Component | Description |
-|-----------|-------------|
-| `StatCard` | Dashboard statistics card: icon + title + value + optional trend |
+| `StatCard` | Dashboard stat: icon + title + value + optional trend |
 | `ActionButtons` | Edit / Delete button group for table rows |
 | `OAuthButton` | Social login button (Google, Facebook) |
 | `UserDropdown` | Avatar + username + dropdown menu |
-| `ThemeToggleBtn` | Light / Dark theme toggle button |
-| `NotificationBell` | Badge + bell icon for notifications |
-| `SidebarLogo` | Brand logo area inside the sidebar |
+| `ThemeToggleBtn` | Light / Dark theme toggle |
+| `NotificationBell` | Badge + bell for notifications |
+| `SidebarLogo` | Brand logo in sidebar |
+| `DeleteConfirm` | Delete confirmation UI |
 
-### Organisms — `src/components/organisms/`
-
-Complex, feature-rich sections. May connect to Zustand stores or React context, but remain reusable across pages.
+### Organisms — `libs/ui/src/organisms/`
 
 | Component | Description |
 |-----------|-------------|
-| `AppHeader` | Top navigation bar (logo, menu toggle, theme, notifications, user) |
-| `AppSidebar` | Collapsible navigation sidebar with menu items |
-| `AppBreadcrumb` | Breadcrumb trail driven by current route |
+| `AppHeader` | Top bar (logo, menu toggle, theme, notifications, user) |
+| `AppSidebar` | Collapsible sidebar with menu items |
+| `AppBreadcrumb` | Breadcrumb from current route |
 | `LoadingFullScreen` | Full-screen loading overlay |
-| `DataTable` | Paginated table synced with URL search params |
-| `FilterBar` | Declarative filter form synced with URL search params |
-| `LoginForm` | Complete login form UI (fields + OAuth buttons) |
-| `UserFormModal` | Create/Edit user modal form |
-| `ProductFormModal` | Create/Edit product modal form |
-| `OrderStatusModal` | Update order status modal |
-| `DashboardStats` | Row of 4 statistics cards |
-| `DashboardCharts` | Weekly bar chart and line trend chart |
+| `DataTable` | Paginated table synced with URL params |
+| `FilterBar` | Filter form synced with URL params |
+| `LoginForm` | Login form + OAuth buttons |
+| `UserFormModal`, `ProductFormModal`, `OrderStatusModal` | Create/Edit modals |
+| `DashboardStats`, `DashboardCharts` | Dashboard stats row and charts |
+| `RouteErrorBoundary` | Route-level error boundary |
 
-### Templates — `src/components/templates/`
-
-Page-level layout shells. Contain routing `<Outlet />` slots and define the overall page structure without real data.
+### Templates — `libs/ui/src/templates/`
 
 | Component | Description |
 |-----------|-------------|
-| `AdminTemplate` | Authenticated layout: AppHeader + AppSidebar + main content area |
-| `AuthTemplate` | Public layout: minimal wrapper for auth pages |
+| `AdminTemplate` | Authenticated layout: header + sidebar + content (uses `<Outlet />`) |
+| `AuthTemplate` | Public layout for auth pages |
 
-### Pages — `src/modules/*/pages/`
+### Pages (feature libs)
 
-Specific instances of templates wired to real data. Pages live inside their **feature module** directory and connect to Zustand stores and services.
+Pages live inside **feature** libraries and are loaded with `loadable()`:
 
-```
-src/modules/
-├── auth/pages/        ← Login, Register, ForgotPassword
-├── dashboard/pages/   ← Dashboard (uses DashboardStats + DashboardCharts)
-├── users/pages/       ← UserList (uses DataTable + FilterBar + UserFormModal)
-├── products/pages/    ← ProductList
-└── orders/pages/      ← OrderList
-```
+- **Auth**: `libs/features/admin/auth/src/pages/` — Login, Register, ForgotPassword
+- **Dashboard**: `libs/features/admin/dashboard/src/pages/` — Dashboard
+- **Users, Products, Orders**: `libs/features/admin/users|products|orders/src/pages/`
+- **Classes** (Vendors): `libs/features/vendors/classes/src/pages/` — ClassesPage
 
 ### Data Flow
 
 ```
-Pages → Templates (layout)
-Pages → Organisms (sections)
-Pages → Zustand Store → Services (API)
-Organisms → Molecules → Atoms
+Apps (admin-portal / vendors) → Router + layout (AdminTemplate / VendorTemplate)
+Layout → Organisms → Molecules → Atoms
+Pages (in feature libs) → Zustand (@stores) → Services (@services) / API
 ```
 
-## Project Structure
+## Project Structure (high level)
 
 ```
-src/
-├── assets/              # Static assets (icons, images)
-├── components/
-│   ├── atoms/           # Primitive UI components
-│   ├── molecules/       # Atom compositions
-│   ├── organisms/       # Complex sections
-│   ├── templates/       # Layout shells
-│   └── utils/           # Loadable, RootBoundary, ScopeComponent
-├── configs/             # Auth, RBAC, breadcrumb configuration
-├── contexts/            # React contexts (LoadingContext)
-├── core/                # Cache, HTTP client, helpers
-├── enums/               # TypeScript enums
-├── guards/              # Route guards (PrivateGuard, PublicGuard, PermissionGuard)
-├── hooks/               # Custom hooks (useMediaQuery, etc.)
-├── interfaces/          # TypeScript interfaces
-├── mocks/               # Mock data for development
-├── modules/             # Feature modules (pages + hooks/stores + services)
-│   ├── auth/
-│   ├── dashboard/
-│   ├── users/
-│   ├── products/
-│   └── orders/
-├── providers/           # Context providers (LoadingProvider)
-├── routing/             # Router configuration + menu aggregation
-├── store/               # Global Zustand stores (theme, etc.)
-├── types/               # TypeScript type definitions
-└── utils/               # Utility functions (export, menu, etc.)
+apps/
+  admin-portal/src/     # Entry (main.tsx), app/Root, app/routing (router + menuItems), app/layout (AdminTemplate, AdminHeader, AdminSidebar, AuthTemplate), styles
+  vendors/src/          # Entry, app/Root, app/routing, app/layout (VendorTemplate, AuthTemplate)
+
+libs/
+  ui/src/               # atoms, molecules, organisms, templates, utils, assets
+  core/src/             # cache, http, dayjs, helper, configs (rbac, auth), guards, shared (menu.utils, permissions), constants
+  shared-types/src/     # types, interfaces, enums
+  hooks/src/            # useMediaQuery, useHasPermission, …
+  contexts/src/         # LoadingProvider
+  stores/src/           # useAuthStore
+  services/src/         # auth.service
+  features/admin/       # auth, dashboard, users, products, orders (each: Router, MenuItems, pages)
+  features/vendors/classes/  # Router, MenuItems, ClassesPage
+  mocks/src/            # Mock data
+  theme/src/            # themeTokens, tailwindExtend, useThemeStore
+  test-utils/src/       # Placeholder
 ```
 
 ## Getting Started
@@ -181,7 +176,7 @@ src/
 ### Prerequisites
 
 - Node.js 18+
-- npm or yarn
+- pnpm (or npm/yarn)
 
 ### Installation
 
@@ -193,10 +188,10 @@ pnpm install
 
 ### Environment Variables
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the app directory (e.g. `apps/admin-portal`) or root as needed:
 
 ```env
-VITE_PORT=3000
+VITE_PORT=4200
 VITE_PUBLIC_API_URL=your_api_url
 BASE_API_URL=your_base_api_url
 LOCAL_CACHE_KEY=your_cache_key
@@ -206,128 +201,129 @@ PUBLIC_URL=/
 ### Development
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Opens Admin Portal at [http://localhost:4200](http://localhost:4200) (or the port set by `VITE_PORT`).
 
-## Available Scripts
+Vendors app:
 
-| Script | Description |
-|--------|-------------|
-| `pnpm dev` | Start the Admin Portal dev server |
-| `pnpm build` | Type-check + production build |
-| `pnpm lint` | Run ESLint |
-| `pnpm preview` | Preview the production build |
-| `pnpm storybook` | Run Storybook for UI library |
-| `pnpm affected:build` | Build affected projects (CI) |
-| `pnpm affected:test` | Test affected projects (CI) |
+```bash
+nx serve vendors
+```
+
+## Path Aliases (tsconfig.base.json + app Vite config)
+
+| Alias | Path |
+|-------|------|
+| `@ui`, `@atoms/*`, `@molecules/*`, `@organisms/*`, `@templates/*`, `@utils/*` | `libs/ui/src` (and subpaths) |
+| `@core`, `@core/*` | `libs/core/src` |
+| `@shared-types`, `@shared-types/*` | `libs/shared-types/src` |
+| `@hooks`, `@hooks/*` | `libs/hooks/src` |
+| `@contexts`, `@contexts/*` | `libs/contexts/src` |
+| `@stores`, `@stores/*` | `libs/stores/src` |
+| `@services`, `@services/*` | `libs/services/src` |
+| `@features/admin/auth`, `@features/admin/feature-dashboard`, `@features/admin/feature-users`, `@features/admin/feature-products`, `@features/admin/feature-orders` | `libs/features/admin/*` |
+| `@features/vendors/feature-classes` | `libs/features/vendors/classes/src` |
+| `@mocks`, `@theme`, `@src/test-utils` | `libs/mocks`, `libs/theme`, `libs/test-utils` |
 
 ## Development Guidelines
 
-### Adding a New Module
+### Adding a New Module (Admin Portal)
 
-1. Create `src/modules/<name>/` with `index.tsx`, `pages/`, `hooks/`, and `services/`
-2. Export `Router: RouteObject` and `MenuItems: IMenuItem[]` from `index.tsx`
-3. Add the module to the `modules` array in `src/routing/index.tsx`
+1. Create a feature lib under `libs/features/admin/<name>/` with `Router` (RouteObject), `MenuItems`, and pages.
+2. In `apps/admin-portal/src/app/routing/index.tsx`, add the module to the `modules` array and to the router `children`.
+3. In `apps/admin-portal/src/app/routing/menuItems.ts`, add the module to the `modules` array so its menu items are included.
 
-### Adding a New Component
+### Adding a New Component (in @ui)
 
-Follow the Atomic Design hierarchy:
+Follow Atomic Design:
 
-- **Atom**: Stateless, no hooks, only styling/props
-- **Molecule**: Combines atoms, still no store/context access
-- **Organism**: Can use hooks, context, or Zustand stores; must be reusable
-- **Template**: Layout shell only — no direct data fetching
-- **Page**: Connect to stores/services; lives in `src/modules/*/pages/`
+- **Atom**: Stateless, no hooks, styling/props only.
+- **Molecule**: Combines atoms; no store/context.
+- **Organism**: May use hooks/context/Zustand; reusable.
+- **Template**: Layout shell with `<Outlet />`; no data fetching.
+- **Page**: Lives in a feature lib; connects to stores/services.
 
 ### Styling
 
-- Use Tailwind CSS 4 utility classes as the primary styling method
-- Use Ant Design theme tokens via `ConfigProvider` in `AdminTemplate`
-- Global Ant Design overrides live in `src/index.css`
+- Tailwind CSS 4 as primary styling.
+- Ant Design theme via `ConfigProvider` in layout (e.g. AdminTemplate).
+- Global overrides in app `styles.css` (e.g. `apps/admin-portal/src/styles.css`).
 
 ## Authentication Flow
 
-1. User accesses a protected route
-2. `PrivateGuard` checks for a valid token in the cache
-3. No token → redirect to `/login`
-4. Login success → token and user data stored in local storage cache
-5. All subsequent API calls include the `Bearer` token via Axios interceptor
-6. Logout clears the cache and redirects to `/login`
+1. User hits a protected route.
+2. `PrivateGuard` (from `@core`) checks cache for token (`AUTH_ADMIN_CACHE_KEY`).
+3. No token → redirect to `/login`.
+4. Login success → token and user data stored via cache; auth store updated.
+5. Axios interceptor (in `@core` http) adds `Authorization: Bearer <token>`.
+6. Logout clears cache and redirects to `/login`.
 
 ## Role Based Access Control (RBAC)
 
-Access is controlled by **roles** and **permissions**. Roles are loaded from the backend (mock API) on login; permissions are derived from roles and stored in Zustand.
+Access is controlled by **roles** and **permissions**. Roles come from the backend (mock) on login; permissions are derived and stored in Zustand (`@stores`).
 
 ### Roles & Permissions
 
 | Role    | Key      | Permissions |
 |---------|----------|-------------|
-| Admin   | `admin`  | Full access: dashboard, users (CRUD), products (CRUD), orders (view/edit/delete) |
-| Manager | `manager` | Dashboard, users (view/edit), products (view/edit), orders (view/edit) — no create/delete on users & products |
-| User    | `user`   | Dashboard, products (view), orders (view) only |
+| Admin   | `admin`  | Full: dashboard, users (CRUD), products (CRUD), orders (view/edit/delete), classes (view) |
+| Manager | `manager` | Dashboard, users (view/edit), products (view/edit), orders (view/edit), classes (view) — no create/delete users/products |
+| User    | `user`   | Dashboard, products (view), orders (view), classes (view) |
 
-Permission format: `resource:action` (e.g. `users:view`, `products:create`, `orders:delete`). Configuration lives in `src/configs/rbac.config.ts` (`ROLES`, `PERMISSIONS`, `ROLE_PERMISSIONS`, `getPermissionsForRoles`).
+Permission format: `resource:action` (e.g. `users:view`, `products:create`). Config: `libs/core/src/configs/rbac.config.ts` (`ROLES`, `PERMISSIONS`, `ROLE_PERMISSIONS`, `getPermissionsForRoles`).
 
 ### Flow
 
-1. **Login**: `Login` calls mock API `getRolesFromBackend(username)` → receives roles → `getPermissionsForRoles(roles)` → cache stores token/username, Zustand stores `roles` and `permissions`.
-2. **Refresh**: `PrivateGuard` runs `hydrateFromCache()` which derives roles from cached username (same mapping as backend) and sets permissions in the store.
-3. **Routes**: `PermissionGuard` wraps dashboard, users, products, orders routes and redirects to home if the user lacks the required permission.
-4. **Menu**: `AdminTemplate` filters menu items by permission via `filterMenuByPermission` so sidebar only shows allowed items.
-5. **Actions**: List pages and `ActionButtons` use `useHasPermission` / `useHasAnyPermission` to show/hide Add, Edit, Delete, View, Export by permission.
+1. **Login**: Mock API returns roles → `getPermissionsForRoles(roles)` → cache + Zustand store updated.
+2. **Refresh**: `PrivateGuard` / layout runs `hydrateFromCache()` to restore roles/permissions from cache.
+3. **Routes**: `PermissionGuard` (`@core`) wraps routes; redirects if permission missing.
+4. **Menu**: `AdminTemplate` / `VendorTemplate` use `filterMenuByPermission(MenuItems)` so sidebar only shows allowed items.
+5. **Actions**: List pages and `ActionButtons` use `useHasPermission` / `useHasAnyPermission` (`@hooks`) to show/hide Add, Edit, Delete, etc.
 
 ### Key Files
 
-- **Config**: `src/configs/rbac.config.ts` — role/permission constants and `getPermissionsForRoles(roles)`.
-- **Auth store**: `src/store/useAuthStore.ts` — `roles`, `permissions`, `setRolesAndPermissions`, `clearRolesAndPermissions`, `hydrateFromCache`.
-- **Mock API**: `src/modules/auth/services/auth.service.ts` — `getRolesFromBackend(username)`, `getRolesForUsername(username)` (used by hydrate).
-- **Hooks**: `src/hooks/useHasPermission.ts` — `useHasPermission(permission)`, `useHasAnyPermission(permissions[])`.
-- **Guards**: `src/guards/PermissionGuard.tsx` — route-level permission check.
-- **Utils**: `src/utils/menu.utils.ts` — `filterMenuByPermission(menuItems)`.
+| Purpose | Location |
+|---------|----------|
+| RBAC config | `libs/core/src/configs/rbac.config.ts` |
+| Auth cache key | `libs/core/src/constants.ts` (`AUTH_ADMIN_CACHE_KEY`) |
+| Auth store | `libs/stores/src/lib/useAuthStore.ts` |
+| Auth API | `libs/services/src/lib/auth.service.ts` |
+| Permission hooks | `libs/hooks/src/useHasPermission.ts` |
+| Guards | `libs/core/src/guards/` (PrivateGuard, PublicGuard, PermissionGuard) |
+| Menu filter | `libs/core/src/shared/menu.utils.tsx` — `filterMenuByPermission` |
 
 ### Demo Logins
 
-Use these usernames on the login page (password arbitrary) to test roles:
+Use these usernames on the login page (password arbitrary):
 
 - `admin` — full access
 - `manager` — no user/product create/delete
-- Any other (e.g. `user`) — view-only dashboard, products, orders
+- Any other (e.g. `user`) — view-only dashboard, products, orders, classes
 
-## Configuration
+## HTTP Client (`libs/core/src/http.ts`)
 
-### Path Aliases
-
-- `@app/*` → `src/*` (configured in `vite.config.ts` and `tsconfig.json`)
-
-### HTTP Client (`src/core/http.ts`)
-
-- Axios instance with `BASE_API_URL`
-- Request interceptor injects `Authorization: Bearer <token>`
-- Response interceptor redirects to `/login` on `401`
+- Axios instance with `BASE_API_URL`.
+- Request interceptor: `Authorization: Bearer <token>` from cache.
+- Response interceptor: redirect to `/login` on 401.
 
 ## Changelog
 
 ### v4.0.0 — NX Workspace Migration
 
-- **NX monorepo**: Added `nx`, `@nx/workspace`, `@nx/react`, `@nx/vite`; `nx.json`, `tsconfig.base.json`, `pnpm-workspace.yaml`.
-- **App**: New app `admin-portal` under `apps/` (routing, providers, assets, env); dev/build via `nx serve` / `nx build`.
-- **Libs**: `@ui`, `@core`, `@shared-types`, `@hooks`, `@features/admin/auth`, `@features/admin/feature-dashboard`, `@features/admin/feature-users`, `@features/admin/feature-products`, `@features/admin/feature-orders`, `@mocks`, `@theme`, `@src/test-utils`.
-- **Auth**: Guards, useAuthStore, useHasPermission, RBAC config, LoadingProvider in `libs/features/admin/auth`; uses `AUTH_ADMIN_CACHE_KEY` from core.
-- **Storybook**: Config moved to `libs/ui/.storybook`; one co-located story (`AppButton.stories.tsx`); existing stories still under `src/stories`.
-- **Improvements**: Affected CI scripts; theme tokens in `@theme`; api-client re-export; test-utils placeholder; module boundary rules in `.eslintrc.json`.
+- **NX monorepo**: `nx`, `@nx/workspace`, `@nx/react`, `@nx/vite`; `nx.json`, `tsconfig.base.json`, `pnpm-workspace.yaml`.
+- **Apps**: `admin-portal` and `vendors` under `apps/`; E2E projects `admin-portal-e2e`, `vendors-e2e`.
+- **Libs**: `@ui`, `@core`, `@shared-types`, `@hooks`, `@contexts`, `@stores`, `@services`, `@features/admin/auth`, `@features/admin/feature-dashboard|users|products|orders`, `@features/vendors/feature-classes`, `@mocks`, `@theme`, `@src/test-utils`.
+- **Auth**: Guards, useAuthStore, useHasPermission, RBAC and auth config in `@core`; store in `@stores`; auth service in `@services`; LoadingProvider in `@contexts`.
+- **Storybook**: `libs/ui/.storybook`; stories under `libs/ui/src`.
+- **Improvements**: Affected CI scripts; theme in `@theme`; module boundary rules.
 
 ### v3.0.0 — Atomic Design Refactor
 
-- Reorganized `src/components/` into `atoms/`, `molecules/`, `organisms/`, `templates/`, `utils/`
-- Removed `src/layouts/` — layouts migrated to `components/templates/`
-- Extracted `LoginForm`, `DashboardStats`, `DashboardCharts` organisms
-- Extracted `StatCard`, `ActionButtons`, `OAuthButton`, `UserDropdown`, `ThemeToggleBtn`, `NotificationBell`, `SidebarLogo` molecules
-- Added `StatusTag`, `GradientAvatar`, `Spinner`, `AppIcon` atoms
-- Moved form modals (`UserFormModal`, `ProductFormModal`, `OrderStatusModal`) to organisms
-- Added barrel exports (`index.ts`) for each component tier
-- Updated all import paths across the codebase
+- Reorganized UI into atoms, molecules, organisms, templates, utils in `libs/ui`.
+- Extracted LoginForm, DashboardStats, DashboardCharts, form modals, StatCard, ActionButtons, OAuthButton, UserDropdown, ThemeToggleBtn, NotificationBell, SidebarLogo, StatusTag, GradientAvatar, Spinner, AppIcon and App* wrappers.
+- Barrel exports per tier.
 
 ### v2.0.0 — Major Dependencies Upgrade (2026-02-11)
 
@@ -337,7 +333,7 @@ Use these usernames on the login page (password arbitrary) to test roles:
 | antd | 5.13 | 6.x |
 | zustand | 4.5 | 5.x |
 | react-router-dom | 6.20 | react-router 7.x |
-| vite | 5.0 | 6.x |
+| vite | 5.0 | 6.x → 7.x |
 | tailwindcss | 3.4 | 4.x |
 | eslint | 8.55 | 9.x |
 
