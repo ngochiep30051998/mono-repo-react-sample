@@ -54,7 +54,7 @@ export default function ProductFormModal({ open, editingId, onClose }: ProductFo
       onOk={handleSubmit}
       onCancel={onClose}
       confirmLoading={saving}
-      destroyOnClose
+      destroyOnHidden
     >
       <Form form={form} layout="vertical" disabled={detailLoading}>
         <Form.Item name="name" label="Product Name" rules={[{ required: true }]}>

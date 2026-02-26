@@ -49,7 +49,7 @@ export default function OrderStatusModal({ open, order, onClose, orderStore }: O
       onOk={handleSubmit}
       onCancel={onClose}
       confirmLoading={saving}
-      destroyOnClose
+      destroyOnHidden
     >
       <div className="py-4">
         <p className="mb-2 text-sm text-slate-500">

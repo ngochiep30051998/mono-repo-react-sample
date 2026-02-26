@@ -134,7 +134,8 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/test-output",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report"
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report",
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/blob-report"
             ],
             "executor": "nx:run-commands",
             "configurations": {},
@@ -145,7 +146,8 @@
               "cwd": "apps/admin-portal-e2e",
               "env": {
                 "PLAYWRIGHT_HTML_OUTPUT_DIR": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\playwright-report\\src-example-spec-ts",
-                "PLAYWRIGHT_HTML_REPORT": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\playwright-report\\src-example-spec-ts"
+                "PLAYWRIGHT_HTML_REPORT": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\playwright-report\\src-example-spec-ts",
+                "PLAYWRIGHT_BLOB_OUTPUT_FILE": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\blob-report\\src-example-spec-ts.zip"
               },
               "command": "playwright test src/example.spec.ts --output=..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\test-output\\src-example-spec-ts"
             },
@@ -183,7 +185,8 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/test-output/src-example-spec-ts",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report/src-example-spec-ts"
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report/src-example-spec-ts",
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/blob-report/src-example-spec-ts.zip"
             ],
             "executor": "nx:run-commands",
             "configurations": {},
@@ -203,7 +206,8 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/test-output",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report"
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report",
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/blob-report"
             ],
             "dependsOn": [
               {
@@ -453,6 +457,201 @@
         "implicitDependencies": []
       }
     },
+    "vendors-e2e": {
+      "name": "vendors-e2e",
+      "type": "e2e",
+      "data": {
+        "root": "apps/vendors-e2e",
+        "metadata": {
+          "targetGroups": {
+            "E2E (CI)": [
+              "e2e-ci--src/example.spec.ts",
+              "e2e-ci",
+              "e2e-ci--merge-reports"
+            ]
+          }
+        },
+        "targets": {
+          "e2e": {
+            "options": {
+              "cwd": "apps/vendors-e2e",
+              "command": "playwright test"
+            },
+            "metadata": {
+              "technologies": [
+                "playwright"
+              ],
+              "description": "Runs Playwright Tests",
+              "help": {
+                "command": "pnpm exec playwright test --help",
+                "example": {
+                  "options": {
+                    "workers": 1
+                  }
+                }
+              }
+            },
+            "dependsOn": [
+              {
+                "projects": [
+                  "vendors"
+                ],
+                "target": "preview"
+              }
+            ],
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "@playwright/test"
+                ]
+              }
+            ],
+            "outputs": [
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/test-output",
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report",
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/blob-report"
+            ],
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "e2e-ci--src/example.spec.ts": {
+            "options": {
+              "cwd": "apps/vendors-e2e",
+              "env": {
+                "PLAYWRIGHT_HTML_OUTPUT_DIR": "..\\..\\dist\\.playwright\\apps\\vendors-e2e\\playwright-report\\src-example-spec-ts",
+                "PLAYWRIGHT_HTML_REPORT": "..\\..\\dist\\.playwright\\apps\\vendors-e2e\\playwright-report\\src-example-spec-ts",
+                "PLAYWRIGHT_BLOB_OUTPUT_FILE": "..\\..\\dist\\.playwright\\apps\\vendors-e2e\\blob-report\\src-example-spec-ts.zip"
+              },
+              "command": "playwright test src/example.spec.ts --output=..\\..\\dist\\.playwright\\apps\\vendors-e2e\\test-output\\src-example-spec-ts"
+            },
+            "metadata": {
+              "technologies": [
+                "playwright"
+              ],
+              "description": "Runs Playwright Tests in src/example.spec.ts in CI",
+              "help": {
+                "command": "pnpm exec playwright test --help",
+                "example": {
+                  "options": {
+                    "workers": 1
+                  }
+                }
+              }
+            },
+            "dependsOn": [
+              {
+                "projects": [
+                  "vendors"
+                ],
+                "target": "preview"
+              }
+            ],
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "@playwright/test"
+                ]
+              }
+            ],
+            "outputs": [
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/test-output/src-example-spec-ts",
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report/src-example-spec-ts",
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/blob-report/src-example-spec-ts.zip"
+            ],
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "e2e-ci": {
+            "executor": "nx:noop",
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "@playwright/test"
+                ]
+              }
+            ],
+            "outputs": [
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/test-output",
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report",
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/blob-report"
+            ],
+            "dependsOn": [
+              {
+                "target": "e2e-ci--src/example.spec.ts",
+                "projects": "self",
+                "params": "forward",
+                "options": "forward"
+              }
+            ],
+            "metadata": {
+              "technologies": [
+                "playwright"
+              ],
+              "description": "Runs Playwright Tests in CI",
+              "nonAtomizedTarget": "e2e",
+              "help": {
+                "command": "pnpm exec playwright test --help",
+                "example": {
+                  "options": {
+                    "workers": 1
+                  }
+                }
+              }
+            },
+            "configurations": {},
+            "options": {},
+            "parallelism": true
+          },
+          "e2e-ci--merge-reports": {
+            "executor": "@nx/playwright:merge-reports",
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "@playwright/test"
+                ]
+              }
+            ],
+            "outputs": [
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report"
+            ],
+            "options": {
+              "config": "playwright.config.ts",
+              "expectedSuites": 1
+            },
+            "metadata": {
+              "technologies": [
+                "playwright"
+              ],
+              "description": "Merges Playwright blob reports from atomized tasks to produce unified reports for the configured reporters."
+            },
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "name": "vendors-e2e",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "sourceRoot": "apps/vendors-e2e/src",
+        "tags": [],
+        "implicitDependencies": [
+          "vendors"
+        ]
+      }
+    },
     "test-utils": {
       "name": "test-utils",
       "type": "lib",
@@ -483,18 +682,27 @@
         "implicitDependencies": []
       }
     },
+    "services": {
+      "name": "services",
+      "type": "lib",
+      "data": {
+        "root": "libs/services",
+        "name": "services",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/services/src",
+        "projectType": "library",
+        "tags": [],
+        "targets": {},
+        "implicitDependencies": []
+      }
+    },
     "vendors": {
       "name": "vendors",
       "type": "app",
       "data": {
         "root": "apps/vendors",
-        "name": "vendors",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/vendors/src",
         "projectType": "application",
-        "tags": [
-          "type:app"
-        ],
+        "metadata": {},
         "targets": {
           "build": {
             "executor": "@nx/vite:build",
@@ -540,6 +748,30 @@
             "parallelism": true,
             "continuous": true
           },
+          "dev": {
+            "continuous": true,
+            "options": {
+              "cwd": "apps/vendors",
+              "command": "vite"
+            },
+            "metadata": {
+              "technologies": [
+                "vite"
+              ],
+              "description": "Starts Vite dev server",
+              "help": {
+                "command": "pnpm exec vite --help",
+                "example": {
+                  "options": {
+                    "port": 3000
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "preview": {
             "executor": "@nx/vite:preview-server",
             "defaultConfiguration": "production",
@@ -553,8 +785,92 @@
             },
             "parallelism": true,
             "continuous": true
+          },
+          "serve-static": {
+            "continuous": true,
+            "executor": "@nx/web:file-server",
+            "options": {
+              "buildTarget": "build",
+              "spa": true
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "typecheck": {
+            "cache": true,
+            "inputs": [
+              "production",
+              "^production",
+              {
+                "externalDependencies": [
+                  "typescript"
+                ]
+              }
+            ],
+            "options": {
+              "cwd": "apps/vendors",
+              "command": "tsc --noEmit -p tsconfig.app.json"
+            },
+            "metadata": {
+              "description": "Runs type-checking for the project.",
+              "technologies": [
+                "typescript"
+              ],
+              "help": {
+                "command": "pnpm exec tsc -p tsconfig.app.json --help",
+                "example": {
+                  "options": {
+                    "noEmit": true
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "build-deps": {
+            "dependsOn": [
+              "^build"
+            ],
+            "configurations": {},
+            "options": {},
+            "parallelism": true,
+            "executor": "nx:noop"
+          },
+          "watch-deps": {
+            "continuous": true,
+            "dependsOn": [
+              "build-deps"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "pnpm exec nx watch --projects vendors --includeDependentProjects -- pnpm exec nx build-deps vendors"
+            },
+            "configurations": {},
+            "parallelism": true
           }
         },
+        "name": "vendors",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/vendors/src",
+        "tags": [
+          "type:app"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "stores": {
+      "name": "stores",
+      "type": "lib",
+      "data": {
+        "root": "libs/stores",
+        "name": "stores",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/stores/src",
+        "projectType": "library",
+        "tags": [],
+        "targets": {},
         "implicitDependencies": []
       }
     },
@@ -11507,11 +11823,6 @@
         "source": "feature-orders",
         "target": "shared-types",
         "type": "static"
-      },
-      {
-        "source": "feature-orders",
-        "target": "auth",
-        "type": "static"
       }
     ],
     "feature-users": [
@@ -11559,11 +11870,6 @@
         "source": "feature-users",
         "target": "shared-types",
         "type": "static"
-      },
-      {
-        "source": "feature-users",
-        "target": "auth",
-        "type": "static"
       }
     ],
     "auth": [
@@ -11585,6 +11891,16 @@
       {
         "source": "auth",
         "target": "ui",
+        "type": "static"
+      },
+      {
+        "source": "auth",
+        "target": "services",
+        "type": "static"
+      },
+      {
+        "source": "auth",
+        "target": "stores",
         "type": "static"
       },
       {
@@ -11663,6 +11979,11 @@
       },
       {
         "source": "admin-portal",
+        "target": "stores",
+        "type": "static"
+      },
+      {
+        "source": "admin-portal",
         "target": "ui",
         "type": "static"
       },
@@ -11729,6 +12050,28 @@
         "type": "static"
       }
     ],
+    "vendors-e2e": [
+      {
+        "source": "vendors-e2e",
+        "target": "vendors",
+        "type": "implicit"
+      },
+      {
+        "source": "vendors-e2e",
+        "target": "npm:@playwright/test",
+        "type": "static"
+      },
+      {
+        "source": "vendors-e2e",
+        "target": "npm:@nx/playwright",
+        "type": "static"
+      },
+      {
+        "source": "vendors-e2e",
+        "target": "npm:@nx/devkit",
+        "type": "static"
+      }
+    ],
     "test-utils": [],
     "contexts": [
       {
@@ -11742,11 +12085,131 @@
         "type": "static"
       }
     ],
-    "vendors": [],
+    "services": [
+      {
+        "source": "services",
+        "target": "core",
+        "type": "static"
+      }
+    ],
+    "vendors": [
+      {
+        "source": "vendors",
+        "target": "contexts",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "core",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:clsx",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:react-router",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "ui",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "theme",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "stores",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "hooks",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:@ant-design/icons",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:antd",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "shared-types",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "feature-dashboard",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "auth",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:react-dom",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:vite",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:@vitejs/plugin-react",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:@nx/vite",
+        "type": "static"
+      }
+    ],
+    "stores": [
+      {
+        "source": "stores",
+        "target": "npm:zustand",
+        "type": "static"
+      },
+      {
+        "source": "stores",
+        "target": "core",
+        "type": "static"
+      },
+      {
+        "source": "stores",
+        "target": "services",
+        "type": "static"
+      }
+    ],
     "hooks": [
       {
         "source": "hooks",
         "target": "core",
+        "type": "static"
+      },
+      {
+        "source": "hooks",
+        "target": "stores",
         "type": "static"
       },
       {
@@ -11787,6 +12250,11 @@
       {
         "source": "core",
         "target": "hooks",
+        "type": "static"
+      },
+      {
+        "source": "core",
+        "target": "stores",
         "type": "static"
       },
       {
@@ -11854,6 +12322,11 @@
       {
         "source": "ui",
         "target": "core",
+        "type": "static"
+      },
+      {
+        "source": "ui",
+        "target": "stores",
         "type": "static"
       },
       {
@@ -25594,5 +26067,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1772013188388
+  "computedAt": 1772073154845
 }

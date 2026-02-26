@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router';
 import { App, Button } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { DownloadOutlined } from '@ant-design/icons';
-import { PERMISSIONS, useHasPermission, useHasAnyPermission } from '@features/admin/auth';
+import { PERMISSIONS, useHasPermission, useHasAnyPermission } from '@core';
 import {
   FilterBar,
   type FilterField,

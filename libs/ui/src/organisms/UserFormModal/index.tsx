@@ -62,7 +62,7 @@ export default function UserFormModal({ open, editingId, onClose, userStore }: U
       onOk={handleSubmit}
       onCancel={onClose}
       confirmLoading={saving}
-      destroyOnClose
+      destroyOnHidden
     >
       <Form form={form} layout="vertical" disabled={detailLoading}>
         <Form.Item name="username" label="Username" rules={[{ required: true }]}>

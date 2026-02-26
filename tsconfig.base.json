@@ -38,6 +38,12 @@
       "@features/admin/feature-dashboard/*": [
         "libs/features/admin/dashboard/src/*"
       ],
+      "@features/vendors/feature-classes": [
+        "libs/features/vendors/classes/src/index.tsx"
+      ],
+      "@features/vendors/feature-classes/*": [
+        "libs/features/vendors/classes/src/*"
+      ],
       "@features/admin/feature-users": [
         "libs/features/admin/users/src/index.ts"
       ],

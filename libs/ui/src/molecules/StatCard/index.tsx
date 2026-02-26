@@ -32,7 +32,12 @@ export default function StatCard({ title, value, prefix, valueColor, trend, suff
         value={value}
         prefix={prefix}
         suffix={suffix ?? trendSuffix}
-        valueStyle={{ color: valueColor, fontWeight: 700 }}
+        styles={{
+          content: {
+            color: valueColor,
+            fontWeight: 700,
+          },
+        }}
       />
     </Card>
   );

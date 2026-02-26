@@ -305,6 +305,304 @@
       "nx/target-defaults"
     ]
   },
+  "apps/vendors": {
+    "root": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.continuous": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.executor": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options.cwd": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options.command": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.technologies": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.technologies.0": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.description": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help.command": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help.example": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.cache": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.inputs": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.executor": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.cwd": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.command": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.description": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "apps/vendors/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "name": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:app": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.mode": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.mode": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.executor": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.defaultConfiguration": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations.production": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations.production.buildTarget": [
+      "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
   "apps/admin-portal-e2e": {
     "root": [
       "apps/admin-portal-e2e/project.json",
@@ -603,170 +901,302 @@
       "nx/core/project-json"
     ]
   },
-  "apps/vendors": {
+  "apps/vendors-e2e": {
     "root": [
-      "apps/vendors/project.json",
+      "apps/vendors-e2e/project.json",
       "nx/core/project-json"
     ],
+    "metadata.targetGroups": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI)": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI).0": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI).1": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI).2": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.options": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.metadata": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.dependsOn": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.cache": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.inputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.outputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.executor": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.options.cwd": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.options.command": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.metadata.technologies": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.metadata.technologies.0": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.metadata.description": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.metadata.help": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.metadata.help.command": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e.metadata.help.example": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.options": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.metadata": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.dependsOn": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.cache": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.inputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.outputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.executor": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.options.cwd": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.options.env": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.options.command": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.metadata.technologies": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.metadata.technologies.0": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.metadata.description": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.metadata.help": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.metadata.help.command": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--src/example.spec.ts.metadata.help.example": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.executor": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.cache": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.inputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.outputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.dependsOn": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata.technologies": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata.technologies.0": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata.description": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata.nonAtomizedTarget": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata.help": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata.help.command": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci.metadata.help.example": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.executor": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.cache": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.inputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.outputs": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.options": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.metadata": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.options.config": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.options.expectedSuites": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.metadata.technologies": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.metadata.technologies.0": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--merge-reports.metadata.description": [
+      "apps/vendors-e2e/playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
     "name": [
-      "apps/vendors/project.json",
+      "apps/vendors-e2e/project.json",
       "nx/core/project-json"
     ],
     "$schema": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "sourceRoot": [
-      "apps/vendors/project.json",
+      "apps/vendors-e2e/project.json",
       "nx/core/project-json"
     ],
     "projectType": [
-      "apps/vendors/project.json",
+      "apps/vendors-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/vendors-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "apps/vendors-e2e/project.json",
       "nx/core/project-json"
     ],
     "tags": [
-      "apps/vendors/project.json",
+      "apps/vendors-e2e/project.json",
       "nx/core/project-json"
     ],
-    "tags.type:app": [
-      "apps/vendors/project.json",
+    "implicitDependencies": [
+      "apps/vendors-e2e/project.json",
       "nx/core/project-json"
     ],
-    "targets": [
-      "apps/vendors/project.json",
+    "implicitDependencies.vendors": [
+      "apps/vendors-e2e/project.json",
       "nx/core/project-json"
-    ],
-    "targets.build": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.executor": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.outputs": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.defaultConfiguration": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.outputPath": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development.mode": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production.mode": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.executor": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.defaultConfiguration": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.options": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.options.buildTarget": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.development": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.development.buildTarget": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.production": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.production.buildTarget": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.executor": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.defaultConfiguration": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.options": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.configurations": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.options.buildTarget": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.configurations.production": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.configurations.production.buildTarget": [
-      "apps/vendors/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.cache": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.inputs": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.dependsOn": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.parallelism": [
-      "nx.json",
-      "nx/target-defaults"
     ]
   },
   "libs/contexts": {
@@ -1075,6 +1505,40 @@
       "nx/core/project-json"
     ]
   },
+  "libs/services": {
+    "root": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/services/project.json",
+      "nx/core/project-json"
+    ]
+  },
   "libs/shared-types": {
     "root": [
       "libs/shared-types/project.json",
@@ -1106,6 +1570,40 @@
     ],
     "targets": [
       "libs/shared-types/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/stores": {
+    "root": [
+      "libs/stores/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/stores/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/stores/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/stores/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/stores/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "libs/stores/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/stores/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/stores/project.json",
       "nx/core/project-json"
     ]
   },

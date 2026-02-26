@@ -3,13 +3,11 @@ import { Suspense } from 'react';
 import { RouteErrorBoundary, Spinner } from '@ui';
 import { VendorTemplate, AuthTemplate } from '../layout';
 import * as Dashboard from '@features/admin/feature-dashboard';
-import * as Users from '@features/admin/feature-users';
-import * as Products from '@features/admin/feature-products';
-import * as Orders from '@features/admin/feature-orders';
+import * as Classes from '@features/vendors/feature-classes';
 import { PublicGuard, PrivateGuard } from '@core';
 import { AuthRouter } from '@features/admin/auth';
 
-const modules = [Dashboard, Users, Products, Orders];
+const modules = [Dashboard, Classes];
 
 const router = createBrowserRouter(
   [

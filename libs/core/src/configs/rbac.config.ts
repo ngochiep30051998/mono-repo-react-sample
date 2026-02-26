@@ -17,6 +17,7 @@ export const PERMISSIONS = {
   ORDERS_VIEW: 'orders:view',
   ORDERS_EDIT: 'orders:edit',
   ORDERS_DELETE: 'orders:delete',
+  CLASSES_VIEW: 'classes:view',
 } as const;
 
 export const ROLE_PERMISSIONS: Record<string, string[]> = {
@@ -33,6 +34,7 @@ export const ROLE_PERMISSIONS: Record<string, string[]> = {
     PERMISSIONS.ORDERS_VIEW,
     PERMISSIONS.ORDERS_EDIT,
     PERMISSIONS.ORDERS_DELETE,
+    PERMISSIONS.CLASSES_VIEW,
   ],
   [ROLES.MANAGER]: [
     PERMISSIONS.DASHBOARD_VIEW,
@@ -42,8 +44,14 @@ export const ROLE_PERMISSIONS: Record<string, string[]> = {
     PERMISSIONS.PRODUCTS_EDIT,
     PERMISSIONS.ORDERS_VIEW,
     PERMISSIONS.ORDERS_EDIT,
+    PERMISSIONS.CLASSES_VIEW,
   ],
-  [ROLES.USER]: [PERMISSIONS.DASHBOARD_VIEW, PERMISSIONS.PRODUCTS_VIEW, PERMISSIONS.ORDERS_VIEW],
+  [ROLES.USER]: [
+    PERMISSIONS.DASHBOARD_VIEW,
+    PERMISSIONS.PRODUCTS_VIEW,
+    PERMISSIONS.ORDERS_VIEW,
+    PERMISSIONS.CLASSES_VIEW,
+  ],
 };
 
 export function getPermissionsForRoles(roles: string[]): string[] {

@@ -15,4 +15,5 @@ function AppInput({ className, allowClear = true, ...rest }: InputProps) {
 }
 
 AppInput.Password = Input.Password;
+AppInput.TextArea = Input.TextArea;
 export default AppInput;

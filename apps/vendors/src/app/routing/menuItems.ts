@@ -1,10 +1,8 @@
 import type { IMenuItem } from '@shared-types';
 import * as Dashboard from '@features/admin/feature-dashboard';
-import * as Users from '@features/admin/feature-users';
-import * as Products from '@features/admin/feature-products';
-import * as Orders from '@features/admin/feature-orders';
+import * as Classes from '@features/vendors/feature-classes';
 
-const modules = [Dashboard, Users, Products, Orders];
+const modules = [Dashboard, Classes];
 
 export const MenuItems: IMenuItem[] = modules
   .map((x) => x.MenuItems)
