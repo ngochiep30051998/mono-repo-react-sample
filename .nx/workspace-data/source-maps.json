@@ -1,310 +1,4 @@
 {
-  "apps/admin-portal": {
-    "root": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "projectType": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.continuous": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.options": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.executor": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.options.cwd": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.options.command": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata.technologies": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata.technologies.0": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata.description": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata.help": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata.help.command": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata.help.example": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.cache": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.inputs": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.options": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.executor": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.options.cwd": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.options.command": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata.description": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata.technologies": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata.technologies.0": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata.help": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata.help.command": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata.help.example": [
-      "apps/admin-portal/vite.config.mts",
-      "@nx/vite/plugin"
-    ],
-    "targets.watch-deps": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.watch-deps.continuous": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.watch-deps.dependsOn": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.watch-deps.executor": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.watch-deps.options": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.watch-deps.options.command": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.dev.metadata.technologies.1": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "targets.typecheck.metadata.technologies.1": [
-      "apps/admin-portal/vite.config.ts",
-      "@nx/vite/plugin"
-    ],
-    "name": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "$schema": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "sourceRoot": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "tags": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "tags.type:app": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.executor": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.outputs": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.defaultConfiguration": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.outputPath": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development.mode": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production.mode": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.executor": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.defaultConfiguration": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.options": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.options.buildTarget": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.development": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.development.buildTarget": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.production": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.production.buildTarget": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.executor": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.defaultConfiguration": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.options": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.configurations": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.options.buildTarget": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.configurations.production": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.preview.configurations.production.buildTarget": [
-      "apps/admin-portal/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.cache": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.inputs": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.dependsOn": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.parallelism": [
-      "nx.json",
-      "nx/target-defaults"
-    ]
-  },
   "apps/vendors": {
     "root": [
       "apps/vendors/project.json",
@@ -584,6 +278,312 @@
     ],
     "targets.preview.configurations.production.buildTarget": [
       "apps/vendors/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "apps/admin-portal": {
+    "root": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.continuous": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.executor": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options.cwd": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.options.command": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.technologies": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.technologies.0": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.description": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help.command": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.help.example": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.cache": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.inputs": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.executor": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.cwd": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.command": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.description": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "apps/admin-portal/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.dev.metadata.technologies.1": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.technologies.1": [
+      "apps/admin-portal/vite.config.mts",
+      "@nx/vite/plugin"
+    ],
+    "name": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:app": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.mode": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.mode": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.executor": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.defaultConfiguration": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.options.buildTarget": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations.production": [
+      "apps/admin-portal/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.preview.configurations.production.buildTarget": [
+      "apps/admin-portal/project.json",
       "nx/core/project-json"
     ],
     "targets.build.cache": [

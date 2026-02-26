@@ -8,9 +8,9 @@ import { useMediaQuery } from '@hooks';
 import { filterMenuByPermission } from '@core';
 import { useAuthStore } from '@stores';
 import { MenuItems } from '../routing/menuItems';
-import AppHeader from './AppHeader';
-import AppSidebar from './AppSidebar';
-import AppBreadcrumb from './AppBreadcrumb';
+import AdminHeader from './AdminHeader';
+import AdminSidebar from './AdminSidebar';
+import { AppBreadcrumb } from '@ui';
 
 export default function AdminTemplate() {
   const { themeMode, mobileDrawerOpen, setMobileDrawerOpen } = useThemeStore();
@@ -49,7 +49,7 @@ export default function AdminTemplate() {
             isDark ? 'bg-[#0a0a0a]' : 'bg-gradient-to-br from-gray-50 to-gray-100'
           )}
         >
-          <AppHeader />
+          <AdminHeader />
           <div className="flex flex-1 overflow-hidden">
             {isMobile ? (
               <Drawer
@@ -66,7 +66,7 @@ export default function AdminTemplate() {
                 }}
                 width={280}
               >
-                <AppSidebar
+                <AdminSidebar
                   menuItems={filteredMenuItems}
                   onItemClick={() => setMobileDrawerOpen(false)}
                   forceExpanded
@@ -81,7 +81,7 @@ export default function AdminTemplate() {
                     : 'bg-white shadow-sidebar'
                 )}
               >
-                <AppSidebar menuItems={filteredMenuItems} />
+                <AdminSidebar menuItems={filteredMenuItems} />
               </aside>
             )}
             <main

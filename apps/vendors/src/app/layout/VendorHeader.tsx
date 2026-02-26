@@ -1,5 +1,4 @@
-
-import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
+import { cache, AUTH_VENDOR_CACHE_KEY } from '@core';
 import { useAuthStore } from '@stores';
 import { DashboardOutlined, UserOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
@@ -11,7 +10,7 @@ export default function VendorHeader() {
   const clearRolesAndPermissions = useAuthStore((s) => s.clearRolesAndPermissions);
 
   const handleLogout = () => {
-    cache.remove(AUTH_ADMIN_CACHE_KEY);
+    cache.remove(AUTH_VENDOR_CACHE_KEY);
     clearRolesAndPermissions();
     navigate('/login');
   };
@@ -22,6 +21,6 @@ export default function VendorHeader() {
     { key: 'logout', label: 'Logout', danger: true, onClick: handleLogout },
   ];
 
-  return <AppHeader title="Vendor Portal" logo={<DashboardOutlined className="text-2xl" />} userMenuItems={userMenuItems} />
+  return <AppHeader title="Vendor Portal" logo={<DashboardOutlined className="text-2xl" />} userMenuItems={userMenuItems} authCacheKey=''/>
 }
 

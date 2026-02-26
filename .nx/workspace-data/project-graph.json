@@ -150,8 +150,7 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/test-output",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/blob-report"
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report"
             ],
             "executor": "nx:run-commands",
             "configurations": {},
@@ -162,8 +161,7 @@
               "cwd": "apps/admin-portal-e2e",
               "env": {
                 "PLAYWRIGHT_HTML_OUTPUT_DIR": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\playwright-report\\src-example-spec-ts",
-                "PLAYWRIGHT_HTML_REPORT": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\playwright-report\\src-example-spec-ts",
-                "PLAYWRIGHT_BLOB_OUTPUT_FILE": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\blob-report\\src-example-spec-ts.zip"
+                "PLAYWRIGHT_HTML_REPORT": "..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\playwright-report\\src-example-spec-ts"
               },
               "command": "playwright test src/example.spec.ts --output=..\\..\\dist\\.playwright\\apps\\admin-portal-e2e\\test-output\\src-example-spec-ts"
             },
@@ -201,8 +199,7 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/test-output/src-example-spec-ts",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report/src-example-spec-ts",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/blob-report/src-example-spec-ts.zip"
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report/src-example-spec-ts"
             ],
             "executor": "nx:run-commands",
             "configurations": {},
@@ -222,8 +219,7 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/test-output",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report",
-              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/blob-report"
+              "{workspaceRoot}/dist/.playwright/apps/admin-portal-e2e/playwright-report"
             ],
             "dependsOn": [
               {
@@ -527,8 +523,7 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/test-output",
-              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report",
-              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/blob-report"
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report"
             ],
             "executor": "nx:run-commands",
             "configurations": {},
@@ -539,8 +534,7 @@
               "cwd": "apps/vendors-e2e",
               "env": {
                 "PLAYWRIGHT_HTML_OUTPUT_DIR": "..\\..\\dist\\.playwright\\apps\\vendors-e2e\\playwright-report\\src-example-spec-ts",
-                "PLAYWRIGHT_HTML_REPORT": "..\\..\\dist\\.playwright\\apps\\vendors-e2e\\playwright-report\\src-example-spec-ts",
-                "PLAYWRIGHT_BLOB_OUTPUT_FILE": "..\\..\\dist\\.playwright\\apps\\vendors-e2e\\blob-report\\src-example-spec-ts.zip"
+                "PLAYWRIGHT_HTML_REPORT": "..\\..\\dist\\.playwright\\apps\\vendors-e2e\\playwright-report\\src-example-spec-ts"
               },
               "command": "playwright test src/example.spec.ts --output=..\\..\\dist\\.playwright\\apps\\vendors-e2e\\test-output\\src-example-spec-ts"
             },
@@ -578,8 +572,7 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/test-output/src-example-spec-ts",
-              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report/src-example-spec-ts",
-              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/blob-report/src-example-spec-ts.zip"
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report/src-example-spec-ts"
             ],
             "executor": "nx:run-commands",
             "configurations": {},
@@ -599,8 +592,7 @@
             ],
             "outputs": [
               "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/test-output",
-              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report",
-              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/blob-report"
+              "{workspaceRoot}/dist/.playwright/apps/vendors-e2e/playwright-report"
             ],
             "dependsOn": [
               {
@@ -12007,17 +11999,7 @@
       },
       {
         "source": "admin-portal",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "admin-portal",
-        "target": "npm:react-router",
-        "type": "static"
-      },
-      {
-        "source": "admin-portal",
-        "target": "npm:antd",
+        "target": "stores",
         "type": "static"
       },
       {
@@ -12032,7 +12014,12 @@
       },
       {
         "source": "admin-portal",
-        "target": "stores",
+        "target": "npm:@ant-design/icons",
+        "type": "static"
+      },
+      {
+        "source": "admin-portal",
+        "target": "npm:antd",
         "type": "static"
       },
       {
@@ -12042,12 +12029,17 @@
       },
       {
         "source": "admin-portal",
-        "target": "npm:@ant-design/icons",
+        "target": "npm:react-router",
         "type": "static"
       },
       {
         "source": "admin-portal",
         "target": "shared-types",
+        "type": "static"
+      },
+      {
+        "source": "admin-portal",
+        "target": "npm:react",
         "type": "static"
       },
       {
@@ -12158,12 +12150,7 @@
       },
       {
         "source": "vendors",
-        "target": "npm:clsx",
-        "type": "static"
-      },
-      {
-        "source": "vendors",
-        "target": "npm:antd",
+        "target": "npm:react-router",
         "type": "static"
       },
       {
@@ -12173,7 +12160,17 @@
       },
       {
         "source": "vendors",
-        "target": "npm:react-router",
+        "target": "stores",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:@ant-design/icons",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:antd",
         "type": "static"
       },
       {
@@ -12188,12 +12185,7 @@
       },
       {
         "source": "vendors",
-        "target": "npm:@ant-design/icons",
-        "type": "static"
-      },
-      {
-        "source": "vendors",
-        "target": "stores",
+        "target": "npm:clsx",
         "type": "static"
       },
       {
@@ -26120,5 +26112,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1772076485659
+  "computedAt": 1772078508424
 }
