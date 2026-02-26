@@ -8,9 +8,9 @@ import { useMediaQuery } from '@hooks';
 import { filterMenuByPermission } from '@core';
 import { useAuthStore } from '@stores';
 import { MenuItems } from '../routing/menuItems';
-import AppHeader from './AppHeader';
-import AppSidebar from './AppSidebar';
-import AppBreadcrumb from './AppBreadcrumb';
+import VendorHeader from './VendorHeader';
+import AppSidebar from './VendorSidebar';
+import VendorBreadcrumb from './VendorBreadcrumb';
 
 export default function VendorTemplate() {
   const { themeMode, mobileDrawerOpen, setMobileDrawerOpen } = useThemeStore();
@@ -49,7 +49,7 @@ export default function VendorTemplate() {
             isDark ? 'bg-[#0a0a0a]' : 'bg-gradient-to-br from-gray-50 to-gray-100'
           )}
         >
-          <AppHeader />
+          <VendorHeader />
           <div className="flex flex-1 overflow-hidden">
             {isMobile ? (
               <Drawer
@@ -92,7 +92,7 @@ export default function VendorTemplate() {
                   : 'bg-gradient-to-br from-gray-50 to-gray-100'
               )}
             >
-              <AppBreadcrumb />
+              <VendorBreadcrumb />
               <Outlet />
             </main>
           </div>

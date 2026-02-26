@@ -65,5 +65,13 @@
         "unitTestRunner": "none"
       }
     }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx:run-commands",
+      "options": {
+        "neverConnectToCloud": true
+      }
+    }
   }
 }

@@ -1437,6 +1437,44 @@
       "nx/core/project-json"
     ]
   },
+  "libs/features/vendors/classes": {
+    "root": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:feature": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/features/vendors/classes/project.json",
+      "nx/core/project-json"
+    ]
+  },
   "libs/hooks": {
     "root": [
       "libs/hooks/project.json",

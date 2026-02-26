@@ -1,37 +1,31 @@
 import clsx from 'clsx';
 import { cache, AUTH_ADMIN_CACHE_KEY } from '@core';
-import { useAuthStore } from '@stores';
 import { useThemeStore } from '@theme';
 import { useMediaQuery } from '@hooks';
-import { MenuFoldOutlined, MenuUnfoldOutlined, DashboardOutlined, UserOutlined } from '@ant-design/icons';
+import { MenuFoldOutlined, MenuUnfoldOutlined, DashboardOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import AppButton from '@atoms/atoms/AppButton';
 import { useNavigate } from 'react-router';
 import UserDropdown from '@molecules/UserDropdown';
 import ThemeToggleBtn from '@molecules/ThemeToggleBtn';
 import NotificationBell from '@molecules/NotificationBell';
-
-export default function AppHeader() {
+type AppHeaderProps = {
+  title: string;
+  logo: React.ReactNode;
+  userMenuItems: MenuProps['items'];
+  authCacheKey?: string;
+};
+export default function AppHeader({
+  title, logo = <DashboardOutlined className="text-2xl" />, userMenuItems,
+  authCacheKey = AUTH_ADMIN_CACHE_KEY,
+}: AppHeaderProps) {
   const navigate = useNavigate();
   const { menuDesktopOpen, toggleMenuDesktopOpen, setMobileDrawerOpen, themeMode, toggleTheme } = useThemeStore();
   const isMobile = !useMediaQuery('(min-width: 992px)');
   const isDark = themeMode === 'dark';
 
-  const cached = cache.getCache(AUTH_ADMIN_CACHE_KEY)?.data as { username?: string } | undefined;
+  const cached = cache.getCache(authCacheKey)?.data as { username?: string } | undefined;
   const username = cached?.username ?? 'User';
-  const clearRolesAndPermissions = useAuthStore((s) => s.clearRolesAndPermissions);
-
-  const handleLogout = () => {
-    cache.remove(AUTH_ADMIN_CACHE_KEY);
-    clearRolesAndPermissions();
-    navigate('/login');
-  };
-
-  const userMenuItems: MenuProps['items'] = [
-    { key: 'profile', icon: <UserOutlined />, label: 'Profile', onClick: () => {} },
-    { type: 'divider' },
-    { key: 'logout', label: 'Logout', danger: true, onClick: handleLogout },
-  ];
 
   return (
     <div
@@ -49,8 +43,8 @@ export default function AppHeader() {
           className="flex items-center gap-2 cursor-pointer text-white text-xl font-bold hover:scale-105 transition-transform"
           onClick={() => navigate('/')}
         >
-          <DashboardOutlined className="text-2xl" />
-          <span className="hidden md:inline">Admin Panel</span>
+          {logo}
+          <span className="hidden md:inline">{title}</span>
         </div>
         <AppButton
           type="text"

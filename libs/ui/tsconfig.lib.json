@@ -13,6 +13,8 @@
       "@utils/*": ["src/utils/*"],
       "@core": ["../core/src/index.ts"],
       "@core/*": ["../core/src/*"],
+      "@shared-types": ["../shared-types/src/index.ts"],
+      "@shared-types/*": ["../shared-types/src/*"],
       "@hooks": ["../hooks/src/index.ts"],
       "@hooks/*": ["../hooks/src/*"],
       "@theme": ["../theme/src/index.ts"],

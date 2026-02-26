@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "feature-classes": {
+      "name": "feature-classes",
+      "type": "lib",
+      "data": {
+        "root": "libs/features/vendors/classes",
+        "name": "feature-classes",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/features/vendors/classes/src",
+        "tags": [
+          "type:feature"
+        ],
+        "targets": {},
+        "implicitDependencies": []
+      }
+    },
     "feature-dashboard": {
       "name": "feature-dashboard",
       "type": "lib",
@@ -11704,6 +11720,43 @@
     }
   },
   "dependencies": {
+    "feature-classes": [
+      {
+        "source": "feature-classes",
+        "target": "npm:@ant-design/icons",
+        "type": "static"
+      },
+      {
+        "source": "feature-classes",
+        "target": "npm:react-router",
+        "type": "static"
+      },
+      {
+        "source": "feature-classes",
+        "target": "ui",
+        "type": "static"
+      },
+      {
+        "source": "feature-classes",
+        "target": "core",
+        "type": "static"
+      },
+      {
+        "source": "feature-classes",
+        "target": "shared-types",
+        "type": "static"
+      },
+      {
+        "source": "feature-classes",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "feature-classes",
+        "target": "npm:antd",
+        "type": "static"
+      }
+    ],
     "feature-dashboard": [
       {
         "source": "feature-dashboard",
@@ -12110,7 +12163,7 @@
       },
       {
         "source": "vendors",
-        "target": "npm:react-router",
+        "target": "npm:antd",
         "type": "static"
       },
       {
@@ -12120,27 +12173,7 @@
       },
       {
         "source": "vendors",
-        "target": "theme",
-        "type": "static"
-      },
-      {
-        "source": "vendors",
-        "target": "stores",
-        "type": "static"
-      },
-      {
-        "source": "vendors",
-        "target": "hooks",
-        "type": "static"
-      },
-      {
-        "source": "vendors",
-        "target": "npm:@ant-design/icons",
-        "type": "static"
-      },
-      {
-        "source": "vendors",
-        "target": "npm:antd",
+        "target": "npm:react-router",
         "type": "static"
       },
       {
@@ -12150,7 +12183,27 @@
       },
       {
         "source": "vendors",
+        "target": "theme",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "npm:@ant-design/icons",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "stores",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
         "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "vendors",
+        "target": "hooks",
         "type": "static"
       },
       {
@@ -12326,17 +12379,17 @@
       },
       {
         "source": "ui",
-        "target": "stores",
-        "type": "static"
-      },
-      {
-        "source": "ui",
         "target": "npm:recharts",
         "type": "static"
       },
       {
         "source": "ui",
         "target": "mocks",
+        "type": "static"
+      },
+      {
+        "source": "ui",
+        "target": "stores",
         "type": "static"
       }
     ],
@@ -26067,5 +26120,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1772073154845
+  "computedAt": 1772076485659
 }
